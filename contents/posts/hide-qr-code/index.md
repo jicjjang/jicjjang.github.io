@@ -1,6 +1,6 @@
 ---
 title: "이미지에 QR Code 숨겨넣기"
-date: "2021-07-29"
+date: "2024-07-03"
 tags: [javascript, basic, hoisting]
 ---
 
