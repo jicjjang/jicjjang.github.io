@@ -4,15 +4,15 @@
       "title": "FE Developer",
       "when": "2022.09 -",
       "company": "Levvels, Gangnam (subsidiary compnay of Dunamu)",
-      "usecase": "React, node, React-query, pnpm, Emotion, vanilla-extract, React Context, React Hook...",
-      "details": "현재 Levvels에 재직중입니다. <a href='https://momentica.com/' target='_blank'>Momentica 서비스</a>와 서비스 어드민을 개발중이며, 현재는 신규서비스와 해당 서비스 어드민을 준비중입니다."
+      "usecase": "React, Nextjs, node, Tanstack-Query, pnpm, Emotion, vanilla-extract, React Context, React Hook...",
+      "details": "현재 Levvels에 재직중입니다. <a href='https://momentica.com/' target='_blank'>Momentica 서비스</a>와 서비스 어드민을 개발, 유지보수 했으며, <a href='https://vuddy.io/' target='_blank'>Vuddy 서비스</a>, 서비스 어드민에 대한 개발과 유지보수를 진행했습니다."
     },
     {
       "title": "FE Developer",
       "when": "2022.05 -",
       "company": "Dunamu, Gangnam (Works at home)",
       "usecase": "React, node, React-query, Emotion, React Context, React Hook...",
-      "details": "블록체인과 nft에 대한 궁금증으로 이직을 하게 되었습니다. 두나무에서 <a href='https://momentica.com/' target='_blank'>Momentica 서비스</a> 업무를 위해 dive 팀(가칭)으로 입사했으며, 자회사로 이동하게된 9월부터 Levvels에서 업무를 진행하게 되었습니다."
+      "details": "블록체인과 NFT에 대한 궁금증으로 이직을 하게 되었습니다. 두나무에서 <a href='https://momentica.com/' target='_blank'>Momentica 서비스</a> 업무를 위해 dive 팀(가칭)으로 입사했으며, 자회사로 이동하게된 9월부터 Levvels에서 업무를 진행하게 되었습니다."
     },
     {
       "title": "FE Developer",
@@ -26,7 +26,7 @@
       "when": "2018.05 - 2020.09 (2년 5개월)",
       "company": "Kakaopay, Pangyo",
       "usecase": "React, mobx, mst, React Context, React Hook...",
-      "details": "벅스에 입사하면서 받은 오리엔테이션 후반부에 팀을 정하기 위해 면담을 하는 과정이 있었습니다. '프론트 엔드' 팀의 여부와 할 수 있는지 여부를 물어봤으나 벅스에는 웹서비스 팀만이 존재하였고, 서버 개발과 template 엔진을 붙인 풀스택 개발을 할 수 밖에 없었습니다. 하지만 계속 원하던 것은 프론트 엔드 개발이었고 이를 적용하기 위해 팀 내에서 수 차례 프론트엔드 개발 관련 세미나를 진행하고 토이 프로젝트를 진행하였습니다. 하지만 번번히 새로운 기술에 대한 검증이 필요하다거나 미숙하다는 이유로 적용이 좌절되었습니다.<br/><br/>이를 계기로 카카오페이에 이직을 하게 되었고, 원하는 프론트 개발을 마음껏 하고, 기존에 많이 경험해보지 못했던 웹뷰 환경에서 많은 엣지케이스를 경험하며 즐겁게 개발하였습니다. <a href='https://www.news1.kr/amp/articles/?3481482' target='_blank'>p2p투자</a>, <a href='http://www.bloter.net/archives/372305' target='_blank'>펀드</a>, <a href='https://n.news.naver.com/article/018/0004629281' target='_blank'>펀드 자동투자</a>, 혜택 등 서비스들의 프론트엔드를 담당 했었습니다."
+      "details": "벅스에 입사하면서 받은 오리엔테이션 후반부에 팀을 정하기 위해 면담을 하는 과정이 있었습니다. '프론트 엔드' 팀의 여부와 할 수 있는지 여부를 물어봤으나 벅스에는 웹서비스 팀만이 존재하였고, 서버 개발과 template 엔진을 붙인 풀스택 개발을 할 수 밖에 없었습니다. 하지만 계속 원하던 것은 프론트 엔드 개발이었고 이를 적용하기 위해 팀 내에서 수 차례 프론트엔드 개발 관련 세미나를 진행하고 토이 프로젝트를 진행하였습니다. 하지만 번번히 새로운 기술에 대한 검증이 필요하다거나 미숙하다는 이유로 적용이 좌절되었습니다.<br/><br/>이를 계기로 카카오페이에 이직을 하게 되었고, 기존에 많이 경험해보지 못했던 웹뷰 환경에서 많은 엣지케이스를 경험하였습니다. <a href='https://www.news1.kr/amp/articles/?3481482' target='_blank'>p2p투자</a>, <a href='http://www.bloter.net/archives/372305' target='_blank'>펀드</a>, <a href='https://n.news.naver.com/article/018/0004629281' target='_blank'>펀드 자동투자</a>, 혜택 등 서비스들의 프론트엔드를 담당 했었습니다."
     },
     {
       "title": "Web Developer",
@@ -47,6 +47,16 @@
     {
       "company": "Dunamu, Levvels (subsidiary compnay of Dunamu)",
       "contents": [
+        {
+          "link": "https://vuddy.io/",
+          "title": "Vuddy 어드민",
+          "content": "어드민 또한 세팅부터 직접 담당해 진행하였습니다. SSO 연동 및 로그인을 함께 진행하였고, 전체적인 세팅 및 초기 개발을 혼자 진행하였습니다. 서비스에서 많이 연동하지 못하는 CRUD에 대해 반복되는 부분의 최적화를 진행했습니다."
+        },
+        {
+          "link": "https://vuddy.io/",
+          "title": "Vuddy",
+          "content": "프로젝트 세팅부터 담당하며 시작했습니다. Nextjs app router를 사용하면서 server component에 대해 익혔고, emotion이나 styled-component 방식의 runtime css 라이브러리를 벗어나 build time css 라이브러리인 vanilla-extract를 채택해 사용함으로써 성능을 향상시키려 노력했습니다. 뒤늦게 합류했던 momentica 프로젝트때보다 초기 세팅 및 논의 과정에서 최대한 레거시가 되지 않도록 많은 합의를 진행하며 개발하였습니다."
+        },
         {
           "link": "https://momentica.com/",
           "title": "Momentica 어드민",
@@ -147,14 +157,19 @@
       "company": "Seminar",
       "contents": [
         {
+          "link": "/posts/hide-qr-code",
+          "title": "이미지에 QR Code 숨겨넣기",
+          "content": "만화, 웹툰을 좋아하는데, 불펌을 방지하기 위해 어떤 방법을 쓸 수 있을까? 에 대해 생각해봤고, 이미지의 rgb값을 미세하게 바꿔 qrcode를 숨겨넣는 재밌는 방법이 있음을 알았습니다. 이를 직접 구현하며 구현에 어떤 차이가 있는지 비교하여 팀원들에게 공유하는 시간을 가졌습니다."
+        },
+        {
           "link": "/posts/langchain-ai-concept",
           "title": "Langchain AI Concept",
-          "content": "UIT 조직 내에서 퍼블리싱을 위주로 개발하는 팀에서 제작한 코드 중, return 부분의 조건문이 re-render가 많이 일어나는 방식으로 만들어지는 것을 보고 reconcilication에 대해 익힌 내용에 대해 정리 및 발표(UIT 조직 월간 미팅)를 진행하였습니다."
+          "content": "AI에 관심이 생겨서 가볍게 공부를 해봤고, LLM에 대한 활용을 학습해 팀원들에게 아주 기초적인 내용과 개념에 대해 공유하는 시간을 가졌습니다."
         },
         {
           "link": "/posts/flutter-tutorial",
           "title": "Flutter로 앱개발 시작하기",
-          "content": "Flutter로 <a href='https://website-slush.vercel.app/' target='_blank'>앱을 출시</a>했습니다. 미국의 GAS 앱의 카피캣으로, 마케팅을 제대로 해보지 않아 사용자는 거의 없었으나 처음으로 flutter로 앱을 만드는것에 의의를 두고 진행했습니다. (<a href='https://apps.apple.com/kr/app/slush/id6475641636?platform=iphone' target='_blank'>앱스토어</a>는 남아있으나, 구글플레이는 사업자 문제로 내려감) 디자인, 기획, 백엔드 개발자 세명과 함께 개발 진행하였고, 앱푸시, 배포, 인앱알림, 결제 등 모든 앱 플로우를 경험해볼 수 있었습니다."
+          "content": "Flutter로 <a href='https://website-slush.vercel.app/' target='_blank'>앱을 출시</a>했습니다. 미국의 GAS 앱의 카피캣으로, 마케팅을 제대로 해보지 않아 사용자는 거의 없었으나 처음으로 flutter로 앱을 만드는것에 의의를 두고 진행했습니다. (서비스 종료) 디자인, 기획, 백엔드 개발자 세명과 함께 개발 진행하였고, 앱푸시, 배포, 인앱알림, 결제 등 모든 앱 플로우를 경험해볼 수 있었습니다. 이러한 사이드 프로젝트를 처음부터 끝까지 진행한 것에 대한 내용을 바탕으로 팀 내 세미나를 진행하였습니다."
         },
         {
           "link": "/posts/react-reconciliation",
@@ -261,14 +276,6 @@
     {
       "title": "HTML5 & CSS",
       "level": 75
-    },
-    {
-      "title": "Vue & Vuex",
-      "level": 40
-    },
-    {
-      "title": "Spring",
-      "level": 30
     },
     {
       "title": "Python & Django",
