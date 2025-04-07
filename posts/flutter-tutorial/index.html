@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.625 -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}h1{margin-left:0;margin-right:0;margin-top:2.4375rem;padding-bottom:calc(0.40625rem - 1px);padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.21875rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;border-bottom:1px solid hsla(0,0%,0%,0.07);}h2{margin-left:0;margin-right:0;margin-top:1.625rem;padding-bottom:calc(0.40625rem - 1px);padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.40625rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;border-bottom:1px solid hsla(0,0%,0%,0.07);}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:hsla(0,0%,0%,0.53);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}ul{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:0.85rem;line-height:1.625rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:1rem;line-height:1.625rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}blockquote{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:calc(0.8125rem - 1px);padding-right:0;padding-top:0;margin-bottom:0.8125rem;border-left:4px solid hsla(0,0%,0%,0.13);color:hsla(0,0%,0%,0.53);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(0.8125rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}b{font-weight:600;}strong{font-weight:600;}dt{font-weight:600;}th{font-weight:600;}li{margin-bottom:calc(0.8125rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}li > ul{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(0.8125rem / 2);}code{font-size:0.85rem;line-height:1.625rem;}kbd{font-size:0.85rem;line-height:1.625rem;}samp{font-size:0.85rem;line-height:1.625rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.08333rem;padding-right:1.08333rem;padding-top:0.8125rem;padding-bottom:calc(0.8125rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}h3,h4,h5,h6{margin-bottom:0.8125rem;margin-top:1.625rem;}ol,ul{margin-left:2.03125rem;}li>ol,li>ul{margin-left:2.03125rem;}a{color:#4078c0;text-decoration:none;}a:hover,a:active{text-decoration:underline;}</style><style data-href="/styles.8bc7d8bd447b1029c4d8.css" id="gatsby-global-css">code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.gatsby-highlight-code-line{background-color:rgba(27,31,35,.05);display:block;margin-right:-1em;margin-left:-1em;padding-right:1em;padding-left:.75em;border-left:.25em solid #f99}.gatsby-highlight{background-color:#f6f8fa;border-radius:.3em;margin:.5em 0;padding:1em;overflow:auto}.gatsby-highlight pre[class*=language-]{background-color:transparent;margin:0;padding:0;overflow:initial;float:left;min-width:100%}:not(pre)>code[class*=language-]{background:rgba(27,31,35,.05)}</style><meta name="generator" content="Gatsby 2.29.1"/><style data-styled="" data-styled-version="5.2.1">.cURDtm{margin-top:0;margin-bottom:1.95rem;}/*!sc*/
+data-styled.g1[id="Header__StyledHeader-sc-1tyi3z1-0"]{content:"cURDtm,"}/*!sc*/
+.fEA-DoH{display:inline-block;margin:0;font-size:2.2974rem;line-height:3.25rem;}/*!sc*/
+data-styled.g2[id="Header__StyledH3-sc-1tyi3z1-1"]{content:"fEA-DoH,"}/*!sc*/
+.ifejFH{box-shadow:none;-webkit-text-decoration:none;text-decoration:none;color:#000;}/*!sc*/
+data-styled.g3[id="Header__StyledLink-sc-1tyi3z1-2"]{content:"ifejFH,"}/*!sc*/
+.joNmkD{float:right;display:inline-block;margin:18px 0;}/*!sc*/
+.joNmkD:after{content:'';display:table;clear:both;}/*!sc*/
+@media (max-width:650px){.joNmkD{display:block;float:none;text-align:center;border-bottom:2px solid #cfcdcd;}}/*!sc*/
+data-styled.g4[id="Header__StyledUl-sc-1tyi3z1-3"]{content:"joNmkD,"}/*!sc*/
+.bDvteE{display:inline-block;padding:0 15px;list-style-type:none;vertical-align:middle;font-size:16px;}/*!sc*/
+@media (max-width:450px){.bDvteE{padding:0 8px;font-size:14px;}}/*!sc*/
+data-styled.g5[id="Header__StyledLi-sc-1tyi3z1-4"]{content:"bDvteE,"}/*!sc*/
+.ddEDAJ{color:#898989;}/*!sc*/
+data-styled.g6[id="Header__StyleLiLink-sc-1tyi3z1-5"]{content:"ddEDAJ,"}/*!sc*/
+.iomvtc{margin:0 auto;max-width:39rem;min-width:320px;padding:2.275rem 1.21875rem;}/*!sc*/
+data-styled.g7[id="Default__StyledDiv-sc-1g8e1t0-0"]{content:"iomvtc,"}/*!sc*/
+.kiCxlO{margin-bottom:6.5rem;}/*!sc*/
+data-styled.g8[id="Default__StyledMain-sc-1g8e1t0-1"]{content:"kiCxlO,"}/*!sc*/
+.jRNtTT{color:#000;margin-bottom:0.325rem;border-bottom:none;font-size:1.41421rem;font-weight:500;line-height:2.4375rem;}/*!sc*/
+data-styled.g9[id="common__StyledCommonH1Title-sc-93z372-0"]{content:"jRNtTT,"}/*!sc*/
+.kRNYYT{color:#898989;font-size:0.93303rem;line-height:1.625rem;}/*!sc*/
+data-styled.g13[id="PostTags__StyledPTags-sc-1ielp4x-0"]{content:"kRNYYT,"}/*!sc*/
+.jcyDuJ{margin-bottom:1.95rem;}/*!sc*/
+data-styled.g15[id="PostHeader__StyledHeader-sc-77g6iv-0"]{content:"jcyDuJ,"}/*!sc*/
+.hOBBqs{display:inline-block;width:30px;height:30px;background-image:url(/img/post/speaker.png);background-size:22px;background-repeat:no-repeat;background-position:6px 10px;}/*!sc*/
+.hOBBqs:active{background-position:6px 11px;}/*!sc*/
+data-styled.g17[id="PostHeader__StyledSpeechSpan-sc-77g6iv-2"]{content:"hOBBqs,"}/*!sc*/
+.ivMKzM{color:#898989;font-size:0.93303rem;line-height:1.625rem;}/*!sc*/
+data-styled.g18[id="PostHeader__StyledTime-sc-77g6iv-3"]{content:"ivMKzM,"}/*!sc*/
+</style><style type="text/css">
+    .autolink-headers--.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .autolink-headers--.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .autolink-headers-- svg,
+    h2 .autolink-headers-- svg,
+    h3 .autolink-headers-- svg,
+    h4 .autolink-headers-- svg,
+    h5 .autolink-headers-- svg,
+    h6 .autolink-headers-- svg {
+      visibility: hidden;
+    }
+    h1:hover .autolink-headers-- svg,
+    h2:hover .autolink-headers-- svg,
+    h3:hover .autolink-headers-- svg,
+    h4:hover .autolink-headers-- svg,
+    h5:hover .autolink-headers-- svg,
+    h6:hover .autolink-headers-- svg,
+    h1 .autolink-headers--:focus svg,
+    h2 .autolink-headers--:focus svg,
+    h3 .autolink-headers--:focus svg,
+    h4 .autolink-headers--:focus svg,
+    h5 .autolink-headers--:focus svg,
+    h6 .autolink-headers--:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><title data-react-helmet="true">June | June</title><link data-react-helmet="true" rel="shortcut icon" type="image/png" href="/static/486b14f334fc4c84f7c22a7629f637d5/c5e7c/favicon.png"/><meta data-react-helmet="true" name="og:title" property="og:title" content="June"/><meta data-react-helmet="true" name="og:site_name" property="og:site_name" content="June"/><meta data-react-helmet="true" name="og:url" property="og:url" content="https://jicjjang.github.io"/><meta data-react-helmet="true" name="og:description" property="og:description" content="왜 플러터를 선택할까?? Native 성능은 제일 좋으나 두개의 플랫폼을 대응해야 하고 손이 너무 많이감 여러 다른언어와 환경을 배우기엔 시간이… KMM (Kotlin Multiplatform Mobile) KMM to flutter…"/><meta data-react-helmet="true" name="description" property="description" content="왜 플러터를 선택할까?? Native 성능은 제일 좋으나 두개의 플랫폼을 대응해야 하고 손이 너무 많이감 여러 다른언어와 환경을 배우기엔 시간이… KMM (Kotlin Multiplatform Mobile) KMM to flutter…"/><meta data-react-helmet="true" name="og:type" property="og:type" content="website"/><meta data-react-helmet="true" name="og:image" property="og:image"/><meta data-react-helmet="true" name="twitter:description" property="twitter:description" content="왜 플러터를 선택할까?? Native 성능은 제일 좋으나 두개의 플랫폼을 대응해야 하고 손이 너무 많이감 여러 다른언어와 환경을 배우기엔 시간이… KMM (Kotlin Multiplatform Mobile) KMM to flutter…"/><meta data-react-helmet="true" name="twitter:title" property="twitter:title" content="June"/><meta data-react-helmet="true" name="twitter:url" property="twitter:url" content="https://jicjjang.github.io"/><meta data-react-helmet="true" name="twitter:site" property="twitter:site" content="https://jicjjang.github.io"/><meta data-react-helmet="true" name="twitter:domain" property="twitter:domain" content="https://jicjjang.github.io"/><meta data-react-helmet="true" name="twitter:image" property="twitter:image"/><link as="script" rel="preload" href="/webpack-runtime-d3c9683e72acd6a76f3e.js"/><link as="script" rel="preload" href="/styles-77e32ee8d6888701d03f.js"/><link as="script" rel="preload" href="/framework-2d6b7d2e2be378715b78.js"/><link as="script" rel="preload" href="/app-546e1f3dac184980066b.js"/><link as="script" rel="preload" href="/f6b66f032c82d0fe30c6a2c7af7bedaaf1113f84-7dd933e8bd2a66a9062b.js"/><link as="script" rel="preload" href="/96d63672732fbc000942c853d1f1d8bc5d3b9750-d9b07ebd0aed616bc44b.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-tsx-98fb5b1bc6b857075e3e.js"/><link as="fetch" rel="preload" href="/page-data/posts/flutter-tutorial/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1576648375.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1963346411.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Default__StyledDiv-sc-1g8e1t0-0 iomvtc"><header class="Header__StyledHeader-sc-1tyi3z1-0 cURDtm"><h3 scale="[object Object]" class="Header__StyledH3-sc-1tyi3z1-1 fEA-DoH"><a class="Header__StyledLink-sc-1tyi3z1-2 ifejFH" href="/">June</a></h3><ul class="Header__StyledUl-sc-1tyi3z1-3 joNmkD"><li class="Header__StyledLi-sc-1tyi3z1-4 bDvteE"><a class="Header__StyleLiLink-sc-1tyi3z1-5 ddEDAJ" href="/">Posts</a></li><li class="Header__StyledLi-sc-1tyi3z1-4 bDvteE"><a class="Header__StyleLiLink-sc-1tyi3z1-5 ddEDAJ" href="/archive">Archive</a></li><li class="Header__StyledLi-sc-1tyi3z1-4 bDvteE"><a class="Header__StyleLiLink-sc-1tyi3z1-5 ddEDAJ" href="/presentation">Presentation</a></li></ul></header><main class="Default__StyledMain-sc-1g8e1t0-1 kiCxlO"><article class="post_article"><header class="PostHeader__StyledHeader-sc-77g6iv-0 jcyDuJ"><h1 scale="[object Object]" class="common__StyledCommonH1Title-sc-93z372-0 jRNtTT">Flutter로 앱개발 시작하기<span class="PostHeader__StyledSpeechSpan-sc-77g6iv-2 hOBBqs"></span></h1><p class="post-meta"><time dateTime="November 13, 2023" scale="[object Object]" class="PostHeader__StyledTime-sc-77g6iv-3 ivMKzM">November 13, 2023</time></p></header><section><h3 id="왜-플러터를-선택할까" style="position:relative;">왜 플러터를 선택할까??<a href="#%EC%99%9C-%ED%94%8C%EB%9F%AC%ED%84%B0%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%A0%EA%B9%8C" aria-label="왜 플러터를 선택할까 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>
+<p>Native</p>
+<ul>
+<li>성능은 제일 좋으나 두개의 플랫폼을 대응해야 하고 손이 너무 많이감</li>
+<li>여러 다른언어와 환경을 배우기엔 시간이…</li>
+</ul>
+</li>
+<li>
+<p>KMM (Kotlin Multiplatform Mobile)</p>
+<ul>
+<li><a href="https://engineering.linecorp.com/ko/blog/demaecan-2nd-recode-kmm-to-flutter" target="_blank" rel="noopener">KMM to flutter</a> 중 <code class="language-text">두 번째 Recode를 시작한 계기</code> 참고</li>
+<li>안드로이드 개발자도 적응이 쉽지 않고, ios로 빌드 시 Kotlin → Object-c 변환 중 디버깅 시행착오가 점점 늘어남</li>
+</ul>
+</li>
+<li>
+<p>React-Native</p>
+<ul>
+<li>React를 하는 우리 입장에서 제일 적응하기 수월하고 쉬움</li>
+<li>하지만 device 기능 사용시 성능 저하는 이미 모두가 알고있는 사실</li>
+</ul>
+</li>
+<li>
+<p>Flutter</p>
+<ul>
+<li>도전해볼만 하다 판단됨</li>
+<li>React-Native보다 device 기능을 사용하는데 용이함</li>
+</ul>
+</li>
+</ul>
+<h3 id="시작하기" style="position:relative;">시작하기<a href="#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0" aria-label="시작하기 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>
+<p>개발 문서는 공식 홈페이지가 쉽게 잘 나와있음</p>
+<ul>
+<li><a href="https://docs.flutter.dev/" target="_blank" rel="noopener">flutter 공식 홈페이지</a></li>
+</ul>
+</li>
+<li>
+<p>설치</p>
+<ul>
+<li><a href="https://docs.flutter.dev/get-started/install/macos?tab=ios14" target="_blank" rel="noopener">flutter 설치</a></li>
+<li>silicon m1칩 주의가 필요!</li>
+<li>
+<p>ios, android 시뮬레이터를 설치하는 방법도 별도로 나와있음</p>
+<ul>
+<li>옛날처럼 android studio에서 따로 열어주고 하는 별도의 액션이 필요 없음</li>
+</ul>
+</li>
+<li>
+<p>vscode로 개발합니다!!</p>
+<ul>
+<li>오히려 android studio보다 쉽고 빠름</li>
+<li>공식 플러그인도 있음. 설치 시 프로젝트를 쉽게 만들고 실행할 수 있음
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a83d5e2749765f78d4a80f54f45702f3/267f6/flutter-plugin.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 48.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB1klEQVQoz4WSS47TQBCGfQSkxO/3I912bHfcfkzi2JmEREIDGrFggcQJWHEHFpyDq/5UG4XFDILFp+ouW9VVf/1akiTwPBecc5RlCdk08H0fhq7DNA2Yxt8xiCiKiBBZlsFzXdiOAy0IAliuB9HtUckebCuQsC2iTY74H6jvKS+R5iWyvEJMZ8cLqCB14/gR+v0E+TAiLWqwcodctMjr9ne88+ouwRVVA1ZJeFEKzaFWGWOopiuKpsNxHNH2AzLGwfLiv2x4jrIWaNoOklhGLpsW1+8/IS9P+PjpMz48P+NyvWGcZkynR5zOZ5wez9iPxz+543xaOBxpsq7HTDmF5phr8Jz0aEaw3QOq/VvsaDHqJ9WB6lRR0MLy7Wt4sUUlduhILhW1QIywLIsKDgjiBHInUNc1hmGAlBJd1y2EYQjbtuHQJu/YtoOA8lmagvsrBB5t2RJn2LTl6usPeKzE8bDHNE243W6Y5xmXywWHwwFCiMVam81miXeKnC8OaZ++wA0TaLIuyFM6VqYLk15UvlK6xnFM/vSWs06eVL4zTfMFFvT1CrqfwX3/DUbIoMVxBGNNOs7vEJOnhq5F3/doSMe2bZdRVTEly0tUUfVgrrr13iAKXPwC/cAmY9enIxMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="flutter-plugin"
+        title="flutter-plugin"
+        src="/static/a83d5e2749765f78d4a80f54f45702f3/e85cb/flutter-plugin.png"
+        srcset="/static/a83d5e2749765f78d4a80f54f45702f3/070ae/flutter-plugin.png 120w,
+/static/a83d5e2749765f78d4a80f54f45702f3/8ff5a/flutter-plugin.png 240w,
+/static/a83d5e2749765f78d4a80f54f45702f3/e85cb/flutter-plugin.png 480w,
+/static/a83d5e2749765f78d4a80f54f45702f3/267f6/flutter-plugin.png 513w"
+        sizes="(max-width: 480px) 100vw, 480px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="VScode-with-flutter" style="position:relative;">VScode with flutter<a href="#VScode-with-flutter" aria-label="VScode with flutter permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>프로젝트 생성
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/945310bfc1eefa1dcb4e788bd9a8893b/84f4d/vscode-with-flutter.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 96.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAACIklEQVQ4y5VU2W7TQBT1H1CpzyX2TJzY8ZZ4Ha9xaBqCkoKEeAEFeOL/P+Fw76QpbWmIeTgaSx6fOcsdG6pu0fXvEC5SOH4EN4gwC+eDwHtd/w+cMIZxvfyB6/Uv2Ldf4W0PmG4OuEr3eJPsH9enuDqt6T0md98w235HuPsJ/8MBN81nGONyC9l/gdvtUSzXSMoOYV7DnAa4sWcE72H9G6bj0z4fYjaHCEuY7hxGHAVI0hRe3sHLGtiOB2G+hbBMwgiS1nMQ5ugIITCeLSBtB4ZMe9jlBmmWIVcVsrJGkiSEFK7rwjQt/YH1L1gWLCK26BBDFHcQzUfERYWubVDXFaSURGQeiawj4Tm8fG+IfA1Z75AQYV2VUEohjmNEUTSIUAh6/2QPKdxAtp+QktVl16LtOvi+j+l0+irhpQNI4a1WOE8LtM0xv9FopC3rbF7gEqnOUNZ7xHlJlis0bavLOPfRZYXqPQRZTlSlCVerFZqm0Rlylqw4pbHK8/yhdXOY5UVWoFQFtdygKApNaNv2M0UDLR9L4ZY5w45KYWVcDG9gRZzpELLHDEVzj1TVRNigItt1Tc+UJZP3fa8t82xeHqGT5WqnS6lKmkMCZ8gknudppUEQYDweDyOUSQepNoiSDBmRZHQFGUzGVk8YbplvClmOc6VbZrus0HGcQYpeJ9RzqMiy0oTc8mQyeXafh8KQPNikkP8yXAqrY7s8Mpzb/yr8Da76NrKhc6uXAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="flutter-plugin"
+        title="flutter-plugin"
+        src="/static/945310bfc1eefa1dcb4e788bd9a8893b/e85cb/vscode-with-flutter.png"
+        srcset="/static/945310bfc1eefa1dcb4e788bd9a8893b/070ae/vscode-with-flutter.png 120w,
+/static/945310bfc1eefa1dcb4e788bd9a8893b/8ff5a/vscode-with-flutter.png 240w,
+/static/945310bfc1eefa1dcb4e788bd9a8893b/e85cb/vscode-with-flutter.png 480w,
+/static/945310bfc1eefa1dcb4e788bd9a8893b/37523/vscode-with-flutter.png 720w,
+/static/945310bfc1eefa1dcb4e788bd9a8893b/d9199/vscode-with-flutter.png 960w,
+/static/945310bfc1eefa1dcb4e788bd9a8893b/84f4d/vscode-with-flutter.png 1208w"
+        sizes="(max-width: 480px) 100vw, 480px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+<li>
+<p>기본 프로젝트 생성 및 시뮬레이터를 띄우고 debug 모드로 실행
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b1f7b57ac674d342e686d5bdba508ca2/35890/flutter-simulator-with-debug.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.16666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACw0lEQVQ4y02Sy08TURTGZ8FKkGdp59Fpp/feebXTFrQkGltJiOiKiLpSUJtGlOjGBRsTN+5d+D+4NyFG4z/gI0YShdbHwiVqokbQijyEz3PvkMYmX86dzp3f/c53rlY5OYfRiUsIy+M4de4mTld9cM4ghEA6bcHOZBCEefi+D8/1kHNyyNgZepfel0Wy4eQc5Eja5VuLuHj7Cabqd7Fwr4mzkzU4WRue58MwDPWRHwQEDSFclz5isG27owwdKMUEU9JevniP9TXg0+oeNtpAo96AbprgTMCy0vSR3CzgRwQMXXh56sBlsSNG4jkFFL4L7nForbdvIH+7m5uqXr86C5NALrVnWdJBllzl4IYCbl5ABIzWXFXuMwVXwMBVe7SV5rICbf/eVrVRv4BkMkk5cgwPJ2Aqt5wyLiIYCRXMy5PTAgECQe5jhw4dKl1rreZrBWq3/6g63zhPEAOVSkXlZ1oWGOXmR3lElRECFxBQ+2GJBlUIwKjlbDaroLJqrZUl7OwCP9baCnhjLnYop5pKpajtfWAhJFcyP+kk+5+czmAU8N1y7HBnY2sfOIOenm7out4Bck7ZyWtTDChHT0kOSGYmfKEydpwYrH1oNRUIW39VuUYZdncfUCAJlFcncA3kfQsuN5RCj4bGTaStFN1JA4LuLaPMJVhbevUcP2nAX76t4+uvPcxOT6H3YI8ahgRKp37BQyDdhR61Ta2TM48cOq6PrBt29srDtWdXMnhcP4SHM0exeGYM87wPA0ldvZQwWQ1WgsFH4yoOQ89F9FyGKeWOQrcycUQ6AT+e0LA6oeHzZC++Tzi4E5oETMBIDCBBwxmkk5O0Tg31kfqhJ/pI/Wodi/6X7xODStr9sAsPChoelbvwtGRgoTgG5/g02Ngkyg7HMccGi44gPTIOq1TDUL6KVFRFmtYmSY9qsMs19WwUq/gHZOzLZsPnRlgAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="flutter-simulator-with-debug"
+        title="flutter-simulator-with-debug"
+        src="/static/b1f7b57ac674d342e686d5bdba508ca2/e85cb/flutter-simulator-with-debug.png"
+        srcset="/static/b1f7b57ac674d342e686d5bdba508ca2/070ae/flutter-simulator-with-debug.png 120w,
+/static/b1f7b57ac674d342e686d5bdba508ca2/8ff5a/flutter-simulator-with-debug.png 240w,
+/static/b1f7b57ac674d342e686d5bdba508ca2/e85cb/flutter-simulator-with-debug.png 480w,
+/static/b1f7b57ac674d342e686d5bdba508ca2/37523/flutter-simulator-with-debug.png 720w,
+/static/b1f7b57ac674d342e686d5bdba508ca2/d9199/flutter-simulator-with-debug.png 960w,
+/static/b1f7b57ac674d342e686d5bdba508ca2/35890/flutter-simulator-with-debug.png 1582w"
+        sizes="(max-width: 480px) 100vw, 480px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>counter 앱이 기본적으로 생성됨</li>
+</ul>
+</li>
+<li>
+<p>디렉토리 구조</p>
+<ul>
+<li>
+<p>lib/main.dart</p>
+<ul>
+<li>c, c++ 처럼 <code class="language-text">main(){…}</code> 함수부터 프로그램이 시작됨</li>
+<li>lib 디렉토리가 웹에서의 src 디렉토리라고 보면 됨</li>
+</ul>
+</li>
+<li>
+<p>pubspec.yaml</p>
+<ul>
+<li>package.json과 같음. 패키지 매니징을 위한 파일</li>
+</ul>
+</li>
+<li>
+<p>android / ios / web/ windows / maxos</p>
+<ul>
+<li>빌드되어서 각 환경에 맞는 코드가 들어가게 됨
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b2d33729cf83394321f8d7e7a5b48627/96638/flutter-directory.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 162.5%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAhCAYAAADZPosTAAAACXBIWXMAABYlAAAWJQFJUiTwAAADRUlEQVRIx6VWTU8aURSlTdON1YbPYWAA+f6SGRAZGEFQIh8mTVzVpK1NGmtq0lV33bRJN036r0/fuTqjY1AEF4c3j5k577x77rt3AplMBp1OB71eD/1+H5PJROYnJyeYTqeCw8NDHB0dyZhIJGCaJorFIrrdrozlchm1Wg2tVguB7e1tIeDNvb09IST5bDbDfD6X0SUcj8dCuLOzg0qlgna77RE2Gg00m00E4vE4iEKhICtw3N3dlQdDoZAgHA570DQN7jt34f4f0HUdhmHIKlTIlUnMkQ/wPuFeuy8vAtV7hKVSSbZLos3NTUSjUd/K95UsUkguIUwmk7JFy7IkPrx+7OWlhKlUSoJq2zYcx5EYuttYizCdTksqMG2oMBgMLt3io4SuKSRjGrkkayskIePHbTNNXDfXVkhTmoqQTsdiMV9qPJX0llBNDGWKaTXF3Ugk4iNYWaEWiyJdqiFrdWDvteWI0RyONMtVvHIMS+WKHPB8Pi9zptKzXKbDLAqsPu6ZXS+GN4ldr9clsXmes9msz5y1TgodZupUq1WZr5KDCwlZ23jsqGxVdYtNUQq55bvqnlUcePSokOTMxWedlLQipMskHA6HGAwGvhxc2WUjnUEul5NKzVwkOdPnqUntI0wkktBTGSkMo9FI1DGWrNxu1X6ofzyosFIpez2FyU2wg90vso8lu4+wkC/KlllkWa0JJjqrEBuP+xKv+fxShalkQZKaW2ZhICEVHh8feyFw7zGui1TexlD9VLd1r/O7XwVs/oyr28BpFE8RY+u5f4N7puioK8KqIuz1HCGlWtu+/pKw1ReFs7+vVLcFDbXgtVm6RyjQVN+WvqzFUKsrdVYDXbuDg/6+1MWm2YDTtZFJGQi93UIsHEI0HFRQLUKLQo/5EVdIxDUENptzaJ1TpIZnKE7OUZx+Rm78AcbBezX/BK13ig1zijfWzAPnG+bMw5ubccuaIvDq4Bs2Blconv1E+8sfDK7+wjr/jfrHXxh9/wft3Q8EnAu8HFwqfH0QL/qXeD24UB9L2TIMs4eWM0LvcILu8BjO0Qxmpw+re4CIkUMstRxRhXg6f+2ykc2jUi6pOJoeqirZzZ06GOP4TYyWgTH8D+gLj69nyif6AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="flutter-directory"
+        title="flutter-directory"
+        src="/static/b2d33729cf83394321f8d7e7a5b48627/e85cb/flutter-directory.png"
+        srcset="/static/b2d33729cf83394321f8d7e7a5b48627/070ae/flutter-directory.png 120w,
+/static/b2d33729cf83394321f8d7e7a5b48627/8ff5a/flutter-directory.png 240w,
+/static/b2d33729cf83394321f8d7e7a5b48627/e85cb/flutter-directory.png 480w,
+/static/b2d33729cf83394321f8d7e7a5b48627/96638/flutter-directory.png 556w"
+        sizes="(max-width: 480px) 100vw, 480px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>앱을 실행시키면 빨간 네모와 같은 프로젝트 컨트롤 버튼들이 생김</p>
+<ul>
+<li>제일 오른쪽에 있는 버튼은 devtools inspector 페이지 버튼</li>
+<li>해당 버튼 클릭 후 아래 있는 빨간 네모 버튼을 누르면 시뮬레이터에 그리드가 잡힘</li>
+<li>또한 탭 아래 <code class="language-text">Select Widget Mode</code> 버튼을 누르면 시뮬레이터에서 속성을 선택할 수 있음
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/95e200c3f7f2fdb038a09c06b00caacf/68acd/flutter-widget.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC1UlEQVQ4y2WTzWtcVRjG5w8wEQkiZOZ+3ztzz/0493NmmpkmSqhYXLkvtXZf2qWCG0HXQps2pYhrNxbETdFF0lhQiIhY8C9w4UbBRXXSJM3P957Gr3rg5RwO3N95nvd5b+/sOKapUl5Z32B9PqPJY7QaonVB246Jooh+v89gMMCyLPq2Q+y6jD2Hyl6l9QbMA4/U9/DCkF75+lU2r93FLs8TbVzi1SufUDWbRKFHEEZ4nofv+4RyLnJNFrgozyKNI3PvuA4j3yWWe89z6V3/aJ/dffj0s5+4+/nPfP09vP3ux0TyQRiERl1f1Nn9VdzJyzhvvWMq3NgUgI0/DHCVwhVHTpLR+3JnD7MO4cni2BxvbG3jjkbMZjOKoqSuG1Ec4qY18bk3TKnJWZK8ICkbVNGQ1hPioqb3xf2vDOT44JijxaE5X7+1TX/osba2Rp7nxHGM60oLIulvotGxJtcN2WSObs+QVWOKdkqqSwHu/gv4x1Pg1vZtnn/xBROIKwHYto1tib00JXhtQnB+wnCjRbVS05ZRU5JMOqUd8P4DAzk5PDFQA7x5m+eWlvAlEANzbBzLwS1TBhcqVi9V+OdykpFCZYlYLdFNRVJoevd2djg6gV9+e8SvUqaHN7dYWl4m6FJ0HByBOmLZVxmZH5N5MekwRinZkwRdj5lOz5BUXQ93n4ay+P0xi0cHpwq3DdA/BXYqHccVYILSiVGVSKKp9DNNUmKdo6uCWOb2H8uPn3C8OPrb8n+AnWUZaAMUa8N5wapYf+nyBGszZSgPpOOKUafw3unYHEogB6cKbzyj0OmAsgejhKyZEtc1AyX3TUqkFSNJV49nJF3Ke9/s8+z6cOsOy8tL/7McxBn5dI6qWxl0S1QHhNFQHmgp1tYllIree+9/wA8Pf2RHlO7tPeDb7x5y8c3LrKysmN/O/isU2f1OoQSgyhJbBt9SKXboi+VM5nFqFP4JX0sJCjlovY4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="flutter-widget"
+        title="flutter-widget"
+        src="/static/95e200c3f7f2fdb038a09c06b00caacf/e85cb/flutter-widget.png"
+        srcset="/static/95e200c3f7f2fdb038a09c06b00caacf/070ae/flutter-widget.png 120w,
+/static/95e200c3f7f2fdb038a09c06b00caacf/8ff5a/flutter-widget.png 240w,
+/static/95e200c3f7f2fdb038a09c06b00caacf/e85cb/flutter-widget.png 480w,
+/static/95e200c3f7f2fdb038a09c06b00caacf/37523/flutter-widget.png 720w,
+/static/95e200c3f7f2fdb038a09c06b00caacf/d9199/flutter-widget.png 960w,
+/static/95e200c3f7f2fdb038a09c06b00caacf/68acd/flutter-widget.png 3648w"
+        sizes="(max-width: 480px) 100vw, 480px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+</ul>
+</li>
+</ul>
+<h3 id="개발" style="position:relative;">개발<a href="#%EA%B0%9C%EB%B0%9C" aria-label="개발 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>웹 개발시의 <code class="language-text">컴포넌트</code>를 flutter에선 <code class="language-text">위젯</code> 이라고 부름</li>
+<li>project에서 기본으로 만들어지는 프로젝트를 살펴봅시다</li>
+</ul>
+<div class="gatsby-highlight" data-language="flutter"><pre class="language-flutter"><code class="language-flutter">import &#39;package:flutter/material.dart&#39;;
+
+void main() {
+  runApp(const MyApp()); // runApp은 기본 flutter의 함수. 프로젝트를 실행해줌.
+}
+
+class MyApp extends StatelessWidget { // StatelessWidget은 state 변수를 사용할 수 없음
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp( // 구글의 머테리얼 앱 디자인을 기본으로 차용
+      title: &#39;Flutter Demo&#39;,
+      theme: ThemeData( // 테마는 디자인 시스템이라고 생각하면 됨
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(title: &#39;Flutter Demo Home Page&#39;), // class에 new는 생략함
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title}); // title을 파람으로 넘겨받음
+
+  final String title;
+
+  @override
+  State&lt;MyHomePage&gt; createState() =&gt; _MyHomePageState();
+}
+
+// StatefulWidget은 이런식으로 class가 두개로 나뉘어서 사용됨
+// 그럼 title을 쓰려면? widget.title로 접근해야됨.
+class _MyHomePageState extends State&lt;MyHomePage&gt; {
+  int _counter = 0; // 이런 일반 변수가 state 값임. setState를 통해 값을 바꾸면 rerender
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++; // 상태 업데이트 시, setState로 감싸줘야 함. 이렇게 안하면 rerender가 안됨
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+		// Material design을 기본으로 가져갈 때
+		// 화면의 노치와 같은 부분을 어디까지 잡아줄지? 맞춰주는 역할
+    return Scaffold(
+      appBar: AppBar(
+				// MaterialApp에서 넣어준 컬러 스킴 값.
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+				// StatefullWidget에선 title을 쓰기 위해선 widget.* 으로 접근해야됨
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: &lt;Widget&gt;[
+            const Text( // const는 변수가 없을 때 들어감
+              &#39;You have pushed the button this many times:&#39;,
+            ),
+            Text(
+              &#39;$_counter&#39;,
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
+      ),
+			// MaterialApp 이므로 플로팅버튼을 설정할 수 있음
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: &#39;Increment&#39;,
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}</code></pre></div>
+<h3 id="이후-개발-방향" style="position:relative;">이후 개발 방향<a href="#%EC%9D%B4%ED%9B%84-%EA%B0%9C%EB%B0%9C-%EB%B0%A9%ED%96%A5" aria-label="이후 개발 방향 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>
+<p>기본적으로 어떤 위젯이 있는지??</p>
+<ul>
+<li><a href="https://docs.flutter.dev/ui/widgets" target="_blank" rel="noopener">링크</a></li>
+<li>웹과 비슷하게 기본적으로 사용되는 위젯, 컴포넌트는 비슷함 (Column, Row, Container, Text, Image.asset, Image.network, …)</li>
+<li>
+<p>중요한건 아키텍쳐</p>
+<ul>
+<li>컴포넌트를 어떻게 나누고, 함수, 기능, 미들웨어 등등 어떻게 빼놓을것인지?</li>
+<li>웹과 다르게 앱은 에러로 인해 죽을 수 있음 ㅠㅠ…</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>FCM…</p>
+<ul>
+<li>이게이게… 복잡합니다… ㅋㅋㅋㅋㅋ</li>
+</ul>
+</li>
+<li>Firebase Analytics</li>
+<li>Firebase Crashtics</li>
+<li>…</li>
+<li>릴리즈의 길은 멀고 험하다…</li>
+</ul></section><hr style="margin-bottom:1.625rem"/><footer style="color:#898989"><p scale="[object Object]" class="PostTags__StyledPTags-sc-1ielp4x-0 kRNYYT">#flutter <!-- -->#android <!-- -->#ios </p></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"></ul></nav></main><footer style="text-align:center"><span style="display:inline-block;width:2.275rem;vertical-align:top;margin:0 10px"><a href="https://github.com/jicjjang" target="_blank"><img src="/static/b33838e421fcf2eaeb2da472c1e32060/github.png" style="display:block;width:100%"/></a></span><span style="display:inline-block;width:2.275rem;vertical-align:top;margin:0 10px"><a href="https://www.linkedin.com/in/jicjjang" target="_blank"><img src="/static/3e51027afe6b45fb6d7b38b1e194dcbb/linkedin.png" style="display:block;width:100%"/></a></span><span style="display:inline-block;width:2.275rem;vertical-align:top;margin:0 10px"><a href="https://www.instagram.com/jicjjang" target="_blank"><img src="/static/64b2774f0c50daac23fd881877dae854/instagram.png" style="display:block;width:100%"/></a></span><span style="display:inline-block;width:2.275rem;vertical-align:top;margin:0 10px"><a href="mailto:jicjjang12@gmail.com" target="_blank"><img src="/static/ababfdf6167a3ee6c8f91dd6d29c765d/mail.png" style="display:block;width:100%"/></a></span></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-59806888-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/flutter-tutorial";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-77c8fcefe79961b4834e.js"],"app":["/app-546e1f3dac184980066b.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-9023e69c8b9c141f86eb.js"],"component---src-pages-archive-tsx":["/component---src-pages-archive-tsx-ba6595d573a79b6a7435.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-0d707984196c022fbb95.js"],"component---src-pages-presentation-1-tsx":["/component---src-pages-presentation-1-tsx-d7d3381e6cc5e66102e1.js"],"component---src-pages-presentation-2-tsx":["/component---src-pages-presentation-2-tsx-6631b7f7b0abaab3bec7.js"],"component---src-pages-presentation-3-tsx":["/component---src-pages-presentation-3-tsx-7401971b6907d4d1e893.js"],"component---src-pages-presentation-4-tsx":["/component---src-pages-presentation-4-tsx-f21f2e1cabb85ae33d8d.js"],"component---src-pages-presentation-5-tsx":["/component---src-pages-presentation-5-tsx-aefebc70c329bb020718.js"],"component---src-pages-presentation-6-tsx":["/component---src-pages-presentation-6-tsx-7c0456a8cf79732c517c.js"],"component---src-pages-presentation-7-tsx":["/component---src-pages-presentation-7-tsx-98a6233bd3b693d8c606.js"],"component---src-pages-presentation-8-tsx":["/component---src-pages-presentation-8-tsx-c6732a60ad07f7dc496f.js"],"component---src-pages-presentation-9-tsx":["/component---src-pages-presentation-9-tsx-13a4713bccc904511ac4.js"],"component---src-pages-presentation-index-tsx":["/component---src-pages-presentation-index-tsx-c82cefae43f93c2c44e7.js"],"component---src-pages-resume-tsx":["/component---src-pages-resume-tsx-2ae78d455f901d50ffa3.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-98fb5b1bc6b857075e3e.js"]};/*]]>*/</script><script src="/polyfill-77c8fcefe79961b4834e.js" nomodule=""></script><script src="/component---src-templates-post-template-tsx-98fb5b1bc6b857075e3e.js" async=""></script><script src="/96d63672732fbc000942c853d1f1d8bc5d3b9750-d9b07ebd0aed616bc44b.js" async=""></script><script src="/f6b66f032c82d0fe30c6a2c7af7bedaaf1113f84-7dd933e8bd2a66a9062b.js" async=""></script><script src="/app-546e1f3dac184980066b.js" async=""></script><script src="/framework-2d6b7d2e2be378715b78.js" async=""></script><script src="/styles-77e32ee8d6888701d03f.js" async=""></script><script src="/webpack-runtime-d3c9683e72acd6a76f3e.js" async=""></script></body></html>

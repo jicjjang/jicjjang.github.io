@@ -1,0 +1,570 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.625 -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}h1{margin-left:0;margin-right:0;margin-top:2.4375rem;padding-bottom:calc(0.40625rem - 1px);padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.21875rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;border-bottom:1px solid hsla(0,0%,0%,0.07);}h2{margin-left:0;margin-right:0;margin-top:1.625rem;padding-bottom:calc(0.40625rem - 1px);padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.40625rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;border-bottom:1px solid hsla(0,0%,0%,0.07);}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:hsla(0,0%,0%,0.53);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}ul{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:0.85rem;line-height:1.625rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:1rem;line-height:1.625rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}blockquote{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:calc(0.8125rem - 1px);padding-right:0;padding-top:0;margin-bottom:0.8125rem;border-left:4px solid hsla(0,0%,0%,0.13);color:hsla(0,0%,0%,0.53);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(0.8125rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}b{font-weight:600;}strong{font-weight:600;}dt{font-weight:600;}th{font-weight:600;}li{margin-bottom:calc(0.8125rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}li > ul{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(0.8125rem / 2);}code{font-size:0.85rem;line-height:1.625rem;}kbd{font-size:0.85rem;line-height:1.625rem;}samp{font-size:0.85rem;line-height:1.625rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.08333rem;padding-right:1.08333rem;padding-top:0.8125rem;padding-bottom:calc(0.8125rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}h3,h4,h5,h6{margin-bottom:0.8125rem;margin-top:1.625rem;}ol,ul{margin-left:2.03125rem;}li>ol,li>ul{margin-left:2.03125rem;}a{color:#4078c0;text-decoration:none;}a:hover,a:active{text-decoration:underline;}</style><style data-href="/styles.8bc7d8bd447b1029c4d8.css" id="gatsby-global-css">code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.gatsby-highlight-code-line{background-color:rgba(27,31,35,.05);display:block;margin-right:-1em;margin-left:-1em;padding-right:1em;padding-left:.75em;border-left:.25em solid #f99}.gatsby-highlight{background-color:#f6f8fa;border-radius:.3em;margin:.5em 0;padding:1em;overflow:auto}.gatsby-highlight pre[class*=language-]{background-color:transparent;margin:0;padding:0;overflow:initial;float:left;min-width:100%}:not(pre)>code[class*=language-]{background:rgba(27,31,35,.05)}</style><meta name="generator" content="Gatsby 2.29.1"/><style data-styled="" data-styled-version="5.2.1">.cURDtm{margin-top:0;margin-bottom:1.95rem;}/*!sc*/
+data-styled.g1[id="Header__StyledHeader-sc-1tyi3z1-0"]{content:"cURDtm,"}/*!sc*/
+.fEA-DoH{display:inline-block;margin:0;font-size:2.2974rem;line-height:3.25rem;}/*!sc*/
+data-styled.g2[id="Header__StyledH3-sc-1tyi3z1-1"]{content:"fEA-DoH,"}/*!sc*/
+.ifejFH{box-shadow:none;-webkit-text-decoration:none;text-decoration:none;color:#000;}/*!sc*/
+data-styled.g3[id="Header__StyledLink-sc-1tyi3z1-2"]{content:"ifejFH,"}/*!sc*/
+.joNmkD{float:right;display:inline-block;margin:18px 0;}/*!sc*/
+.joNmkD:after{content:'';display:table;clear:both;}/*!sc*/
+@media (max-width:650px){.joNmkD{display:block;float:none;text-align:center;border-bottom:2px solid #cfcdcd;}}/*!sc*/
+data-styled.g4[id="Header__StyledUl-sc-1tyi3z1-3"]{content:"joNmkD,"}/*!sc*/
+.bDvteE{display:inline-block;padding:0 15px;list-style-type:none;vertical-align:middle;font-size:16px;}/*!sc*/
+@media (max-width:450px){.bDvteE{padding:0 8px;font-size:14px;}}/*!sc*/
+data-styled.g5[id="Header__StyledLi-sc-1tyi3z1-4"]{content:"bDvteE,"}/*!sc*/
+.ddEDAJ{color:#898989;}/*!sc*/
+data-styled.g6[id="Header__StyleLiLink-sc-1tyi3z1-5"]{content:"ddEDAJ,"}/*!sc*/
+.iomvtc{margin:0 auto;max-width:39rem;min-width:320px;padding:2.275rem 1.21875rem;}/*!sc*/
+data-styled.g7[id="Default__StyledDiv-sc-1g8e1t0-0"]{content:"iomvtc,"}/*!sc*/
+.kiCxlO{margin-bottom:6.5rem;}/*!sc*/
+data-styled.g8[id="Default__StyledMain-sc-1g8e1t0-1"]{content:"kiCxlO,"}/*!sc*/
+.jRNtTT{color:#000;margin-bottom:0.325rem;border-bottom:none;font-size:1.41421rem;font-weight:500;line-height:2.4375rem;}/*!sc*/
+data-styled.g9[id="common__StyledCommonH1Title-sc-93z372-0"]{content:"jRNtTT,"}/*!sc*/
+.kRNYYT{color:#898989;font-size:0.93303rem;line-height:1.625rem;}/*!sc*/
+data-styled.g13[id="PostTags__StyledPTags-sc-1ielp4x-0"]{content:"kRNYYT,"}/*!sc*/
+.jcyDuJ{margin-bottom:1.95rem;}/*!sc*/
+data-styled.g15[id="PostHeader__StyledHeader-sc-77g6iv-0"]{content:"jcyDuJ,"}/*!sc*/
+.hOBBqs{display:inline-block;width:30px;height:30px;background-image:url(/img/post/speaker.png);background-size:22px;background-repeat:no-repeat;background-position:6px 10px;}/*!sc*/
+.hOBBqs:active{background-position:6px 11px;}/*!sc*/
+data-styled.g17[id="PostHeader__StyledSpeechSpan-sc-77g6iv-2"]{content:"hOBBqs,"}/*!sc*/
+.ivMKzM{color:#898989;font-size:0.93303rem;line-height:1.625rem;}/*!sc*/
+data-styled.g18[id="PostHeader__StyledTime-sc-77g6iv-3"]{content:"ivMKzM,"}/*!sc*/
+</style><style type="text/css">
+    .autolink-headers--.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .autolink-headers--.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .autolink-headers-- svg,
+    h2 .autolink-headers-- svg,
+    h3 .autolink-headers-- svg,
+    h4 .autolink-headers-- svg,
+    h5 .autolink-headers-- svg,
+    h6 .autolink-headers-- svg {
+      visibility: hidden;
+    }
+    h1:hover .autolink-headers-- svg,
+    h2:hover .autolink-headers-- svg,
+    h3:hover .autolink-headers-- svg,
+    h4:hover .autolink-headers-- svg,
+    h5:hover .autolink-headers-- svg,
+    h6:hover .autolink-headers-- svg,
+    h1 .autolink-headers--:focus svg,
+    h2 .autolink-headers--:focus svg,
+    h3 .autolink-headers--:focus svg,
+    h4 .autolink-headers--:focus svg,
+    h5 .autolink-headers--:focus svg,
+    h6 .autolink-headers--:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><title data-react-helmet="true">June | June</title><link data-react-helmet="true" rel="shortcut icon" type="image/png" href="/static/486b14f334fc4c84f7c22a7629f637d5/c5e7c/favicon.png"/><meta data-react-helmet="true" name="og:title" property="og:title" content="June"/><meta data-react-helmet="true" name="og:site_name" property="og:site_name" content="June"/><meta data-react-helmet="true" name="og:url" property="og:url" content="https://jicjjang.github.io"/><meta data-react-helmet="true" name="og:description" property="og:description" content="LangChain은 프레임워크 LLM (Large Language Model)으로 서비스를 만들 수 있게 도와줌
+
+ LLM 우리가 아는 chatGPT도 LLM 중 하나 chatGPT처럼 대화형 AI 서비스에서 이용하는게 LLM인가? 그건 chatGPT를 이용해 OpenAI…"/><meta data-react-helmet="true" name="description" property="description" content="LangChain은 프레임워크 LLM (Large Language Model)으로 서비스를 만들 수 있게 도와줌
+
+ LLM 우리가 아는 chatGPT도 LLM 중 하나 chatGPT처럼 대화형 AI 서비스에서 이용하는게 LLM인가? 그건 chatGPT를 이용해 OpenAI…"/><meta data-react-helmet="true" name="og:type" property="og:type" content="website"/><meta data-react-helmet="true" name="og:image" property="og:image"/><meta data-react-helmet="true" name="twitter:description" property="twitter:description" content="LangChain은 프레임워크 LLM (Large Language Model)으로 서비스를 만들 수 있게 도와줌
+
+ LLM 우리가 아는 chatGPT도 LLM 중 하나 chatGPT처럼 대화형 AI 서비스에서 이용하는게 LLM인가? 그건 chatGPT를 이용해 OpenAI…"/><meta data-react-helmet="true" name="twitter:title" property="twitter:title" content="June"/><meta data-react-helmet="true" name="twitter:url" property="twitter:url" content="https://jicjjang.github.io"/><meta data-react-helmet="true" name="twitter:site" property="twitter:site" content="https://jicjjang.github.io"/><meta data-react-helmet="true" name="twitter:domain" property="twitter:domain" content="https://jicjjang.github.io"/><meta data-react-helmet="true" name="twitter:image" property="twitter:image"/><link as="script" rel="preload" href="/webpack-runtime-d3c9683e72acd6a76f3e.js"/><link as="script" rel="preload" href="/styles-77e32ee8d6888701d03f.js"/><link as="script" rel="preload" href="/framework-2d6b7d2e2be378715b78.js"/><link as="script" rel="preload" href="/app-546e1f3dac184980066b.js"/><link as="script" rel="preload" href="/f6b66f032c82d0fe30c6a2c7af7bedaaf1113f84-7dd933e8bd2a66a9062b.js"/><link as="script" rel="preload" href="/96d63672732fbc000942c853d1f1d8bc5d3b9750-d9b07ebd0aed616bc44b.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-tsx-98fb5b1bc6b857075e3e.js"/><link as="fetch" rel="preload" href="/page-data/posts/langchain-ai-concept/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1576648375.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1963346411.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Default__StyledDiv-sc-1g8e1t0-0 iomvtc"><header class="Header__StyledHeader-sc-1tyi3z1-0 cURDtm"><h3 scale="[object Object]" class="Header__StyledH3-sc-1tyi3z1-1 fEA-DoH"><a class="Header__StyledLink-sc-1tyi3z1-2 ifejFH" href="/">June</a></h3><ul class="Header__StyledUl-sc-1tyi3z1-3 joNmkD"><li class="Header__StyledLi-sc-1tyi3z1-4 bDvteE"><a class="Header__StyleLiLink-sc-1tyi3z1-5 ddEDAJ" href="/">Posts</a></li><li class="Header__StyledLi-sc-1tyi3z1-4 bDvteE"><a class="Header__StyleLiLink-sc-1tyi3z1-5 ddEDAJ" href="/archive">Archive</a></li><li class="Header__StyledLi-sc-1tyi3z1-4 bDvteE"><a class="Header__StyleLiLink-sc-1tyi3z1-5 ddEDAJ" href="/presentation">Presentation</a></li></ul></header><main class="Default__StyledMain-sc-1g8e1t0-1 kiCxlO"><article class="post_article"><header class="PostHeader__StyledHeader-sc-77g6iv-0 jcyDuJ"><h1 scale="[object Object]" class="common__StyledCommonH1Title-sc-93z372-0 jRNtTT">LangChain AI에 대한 개념<span class="PostHeader__StyledSpeechSpan-sc-77g6iv-2 hOBBqs"></span></h1><p class="post-meta"><time dateTime="June 09, 2024" scale="[object Object]" class="PostHeader__StyledTime-sc-77g6iv-3 ivMKzM">June 09, 2024</time></p></header><section><ul>
+<li>
+<p>LangChain은 프레임워크</p>
+<ul>
+<li>LLM (Large Language Model)으로 서비스를 만들 수 있게 도와줌
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 346px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/287b201e47d72f2feff15ab3954716ec/8f77f/ai-model1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 165%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAhCAYAAADZPosTAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE10lEQVRIx5WWeVMiSRDF3VU55UYQBQGRw/tCRcfxvgAVR5TxmtU1Yr7/R8itXzbVMhsbG7t/ZFR1dVGdL/O9VwwlU9OSma1LulSXXLYgnduuNBp7sra2JcfH5zI/vyKRSFISiYn/FEMcOFnelJQ5sJAvydvbhzw9vUqv9yQfHz9lc3P3/x0Yj6clFk1K3EQslpZgMCpjYzEJheISCET0sGQy86+H2PecNaQL45MmpnQhFktJNDquBw3OGe08EnHmfJQxHE7ob50MzemhSEKCoZik0jkpFssyN7csS0vrUiiUJZ+flVKppvPp6ZLUaou6Riwvb0g2W9R6T0zkNIGhmDnVFwjJ8IhHijM1ub9/kuvrO7m8vJKzs6bc3X2Xx8cfZt7SaLdvzVpPWq2OvLy8ycZGQ05PL2VyMu8cmEhkZDyVNZHTtC0E4Aw2g3V+YEtBDEJm3amhgRzlILOBw1nka8Cj2Dwzjps6czDvbL2Ay7tisaL72aOQPb6A/Pb7sIE8J72HZ4V5c9OVi4srhQdk5ufnLV3nfbvdkff3n7K19cW8a8vXr8f6Mc0wkZyUuMkulZoyxS5JJjMt6XRWR74+M1OVqamC5HIzOtIQMiJDfkNDCO2yPRDaUBe/P6w1YQ4feYaPzAlqxRp8pYbsBaqtsUL2+oIG8ojkC1W5urrVLjMeHZ1rt4F5eHgm+/sn0mxem7VrI8sLeX5+k5WVuna8Vlv6zJCGwEVqAKfQb6WyoJugBXVibWFhVYM9cHB1dVOhl8vzhqtVhe3SJpWe1rRHRwPi84UUJqPHE9Rg7vOFFa7dw2hlass0RDP8htijHp9MZUuyu7svBwenCrde39Hs9vaONFMyY769vafPrdaNVKuLCp/muQeOhePi84dM+rOqDvsjgudm80Z2dvbNxw703cnJpdYTunAgH6YkLmQ0nJ5wIHu8Y+I1ASTgOVBDbreZ895Ct0xwlWIzDATDeijNoODAm52d06A5jPBxcXFN5xgGmdEUPJOGkpBbw+FRrxSKNekaFbSMCjACoN3ePhizfTEG0NQAPmuMKAjaUG+S+FuXMYeUdgsYlrjWB60BMNo5exx/TLpG6/IwYn6UNIqB9UiMriE/nhntnHeMBBJEetYwFPKnUvrmYOB9+9ZTtWAI3e53c8f80TeHtqqm231UX8QcoA9qovto39Ey1tTPDvHzVZsZRScT6kMmmUxO9xCsWWvjHftdcyAgJtSIKvyM1pA6EdZ07R7qbOtL2Odf/DBfrErHQOp0ugqZLiN8SoAaMAh8ELgQ/vX1T6UXjEBRarBkGDMFDZvTM5m8Xk5wEZ7BN2ixvr6lioCPBHtQBpzEE+FnpTLfN9gB2kTN3fxpBI46vH3leAcUxGhV4/dHXPr0/TCjt96IIXbOaHnfWDmaJSDywcGJKgHyYhoE0LGuer2hmsbSqJ9zLyecexlzKJXmVAUchhIwUwwCumCqjcZX1ySAvLd3qHRBJe6Bg+YQM4tAGTQHSgAk1phb6Lb7rLHvlwz514CeJ0xTKDr/HGgCHaQBNIgGMCcbApdGTXSXZ/5ZuH4YGIuoOZQri4YK7wrvwVynvd6zwu107lVBKALFYKx8DPg8o57t7S/KVYXMjaeRdK5SCGwveAgLv+wtyDv7r+Kf/mX8BSNUnl3e0Jw/AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ai-modal1"
+        title="ai-modal1"
+        src="/static/287b201e47d72f2feff15ab3954716ec/8f77f/ai-model1.png"
+        srcset="/static/287b201e47d72f2feff15ab3954716ec/070ae/ai-model1.png 120w,
+/static/287b201e47d72f2feff15ab3954716ec/8ff5a/ai-model1.png 240w,
+/static/287b201e47d72f2feff15ab3954716ec/8f77f/ai-model1.png 346w"
+        sizes="(max-width: 346px) 100vw, 346px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 332px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e1e269da005f02e5c119e1d40707a250/f8dc5/ai-model2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 188.33333333333331%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAmCAYAAADEO7urAAAACXBIWXMAABYlAAAWJQFJUiTwAAAFPUlEQVRIx2WW6VYjOQyFM/QM0JC1sgNptrCHfScBEiB0EiBhb+CwnOkz7/8KGn8qVAT6h8u27HLpSlfXFUp4OekfiIiXzMuPH5MyM1OSqak5KRbnZGlpXfuJiRmZn1+W5eUNmZ0tyehoUVZWNqRQmJC1tW1nW5R0ekji8bSEojxCIYklsnJwcCytVkdOTppycXElnc6tHB835Ojop7TbN3J5eSe12qmsrm5Jo3HhDt2U8/MrfQcnPC8rIS+Zk3DUk3giI5VKTXZ3D9QzDl1f31EPdnYqbrytHprHeMV4bm5JD6YfHh6TUCo1JNncqKRSeRkYiEl/f0S+f49KX19Ye2vYaYODcYlEPN1Lzxx7JJL0PYy7xz+9/ZJwnk5NzevXFhfX1Mvt7YqUSqsav42NXefpfuAla5OTs+oZqPA6Gk1KKOag9nz7W6LxjMbs6upeTk9b8vz8r4vjtcaKOHU6N3J2dil7e4f60cPDYw0HMWYN2yfISechmcLtWCylIaAnc6zxdSACDRtzW7f9vB+CLmQ66QwJ5202OyKZzLBuGBkZD8a5XEHn+fwPtUGxoaFR3c86B2sMo/GU0gbIpP/m5kGhPT6+yt3dk45p9/dPOif7m5t7Ggrg3t4+OPgnerh6qJ45SAl3+tLSmiZgfHxa40PwadhIwNjYlL5Ig9R4Wyz6djzWA4lhOlNQt40iUIIeSoTDiYAuNGLX3VinMVbIZPmvnm8SdyW4tVWWarWulbG7u6/wGFNB2KENdGIOVZ6e3tROudLIgfKwr39AYZN6Nu7v1xzPyvoiNKHciFu5XFVeWv0SQz4yM7Og5Qh0hZzLjyk1gGSwGQPdh+/3ViUGn2oiHEYfhYxnA+GYqg3JKLoin55eCOqVSsAOJFSG4GPD062tPfUMZ4BLH6gN0Ksu/e32tVZLvd6S6+t7rRao1Gy2lT6UHFARkrOzjsaRw8m4emhZTjoPyTQN4kJYIzk9XzeSWxVZdRjBPS/j89BzLfnOdjZCARsDxeZ4YIdYmQb7XJ9Kj3RBdgJLRoHYarWdQJwpJESg2bxwFfGomYcBzKkqYJN5yO8l0pIZmvwQWK6CeRdsNhHohYUVpRF9o3HuKHSkCUHiTNJIErycde/lqGkXui61yX+igomqCWhvbzgQVmxGFVMd4Ce/CizUwCtElEvIPMUbqgi6YMNDSwrJsuY5lIHAEkPgoirQA2oQJ2L48vLb0ePVfWhdDwYmnv15YPazwALBsmoNG3SxbA4OJhQ6L5sY845ChtjdAgsVeJmGoBoX2cwc8tKQLuZ4SBWxP/DQBJZ7GeX49evZVcqdwqZigE4YgM11WqvV9e7Z3z9yatSQh4cXrSgOxttAYKEPNCAJ1DFjehSEuJVKK+oVKPAaL1mHSvDQkLyX3ohCRihNYE1tTGBNVeyywm6qwz7WNIa+wPaowEKJavVE4ZBxMox3aCSVwzrVhE5CLe4SayiU/tuYwNJzmRM7NiCcdiCXEyUJT+Eih0GdSqWqe/kId04A2QQWGCaq1rABkVCYuDL+uKf9Zve3L7CDvsBaoMkYX6QxLhTGFZLZ+VUxqnST+5026U+0QTChC4pjtIEyb2//6b0CvNfX3yoSX8vvi8D6AoqXUMDogQ1aYLdfku7fFjsoqJRugeWLxKNbYNlo96+9mE5//PdY2Vn7Q2C5U0xgEQcqg78v5vx+kF3+ZKkW1uv1ptIIFEEtR5wHCCy3XLl8qNKFZNFj88ebShsqg0NXVzdVxuxmtLCE/HgMB/ExmhgtuqujW1RtT/dvHfD/BwZqMWTCg/vNAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ai-modal2"
+        title="ai-modal2"
+        src="/static/e1e269da005f02e5c119e1d40707a250/f8dc5/ai-model2.png"
+        srcset="/static/e1e269da005f02e5c119e1d40707a250/070ae/ai-model2.png 120w,
+/static/e1e269da005f02e5c119e1d40707a250/8ff5a/ai-model2.png 240w,
+/static/e1e269da005f02e5c119e1d40707a250/f8dc5/ai-model2.png 332w"
+        sizes="(max-width: 332px) 100vw, 332px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+</ul>
+</li>
+</ul>
+<h3 id="LLM" style="position:relative;">LLM<a href="#LLM" aria-label="LLM permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>우리가 아는 chatGPT도 LLM 중 하나</li>
+<li>
+<p>chatGPT처럼 대화형 AI 서비스에서 이용하는게 LLM인가?</p>
+<ul>
+<li>그건 chatGPT를 이용해 OpenAI에서 범용적 사용을 위해 서비스를 만들어 놓은 것</li>
+<li>chatGPT의 LLM 모델만 사용할수도 있음</li>
+</ul>
+</li>
+<li>
+<p><a href="https://smith.langchain.com/hub" target="_blank" rel="noopener">https://smith.langchain.com/hub</a></p>
+<ul>
+<li>LangChain hub 사이트에서 모델이 얼마나 있는지 확인할 수 있음</li>
+<li>해당 모델들은 알만한 회사들의 모델들</li>
+<li>보통 뼈대가 되는 모델들도 위에 있는 모델들이 유명한 모델이긴 해도 다른 모델들이 많음</li>
+</ul>
+</li>
+</ul>
+<h3 id="PROMPT-Engineering" style="position:relative;">PROMPT Engineering<a href="#PROMPT-Engineering" aria-label="PROMPT Engineering permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>말 그대로 어떻게 더 효과적으로 LLM에게 질문을 할지에 대한 내용</li>
+<li>
+<p>원하는 AI 모델링 결과를 얻기위해 입력하는 모든것</p>
+<ul>
+<li>사전에 학습시키는 데이터</li>
+<li>상황마다 다른 유저의 입력</li>
+<li>모델을 조정하는 외부 정보</li>
+<li>...</li>
+</ul>
+</li>
+<li>
+<p>chatGPT3.5는 2021년 이전 데이터들을 학습했다고 한다. 그래서 날짜와 상관있는데 데이터에 대한 질문을 하면 (ex - <code class="language-text">2024년 남자 테니스 랭킹 1위는 누구야?</code>) 이상한 답변을 진짜인것 마냥 답해줌</p>
+<ul>
+<li>이를 <code class="language-text">할루시네이션</code> 이라고 함</li>
+<li>정확히는 정보가 없더라도 엉뚱한 대답 or 거짓으로 말을 이어나가는 현상</li>
+<li>이런 현상을 줄여나갈 수 있도록 노력해야 함</li>
+</ul>
+</li>
+</ul>
+<h3 id="Chain" style="position:relative;">Chain<a href="#Chain" aria-label="Chain permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>
+<p>LLM 사슬을 형성하여 연속 LLM 호출이 가능하도록 해줌</p>
+<ul>
+<li>(A 질문 => A 답변 => B 질문 => A 답변과 섞어서 B에 대한 답변...)</li>
+</ul>
+</li>
+<li>아래 설명할 RAG단계에서 store 이후 결과가 chain으로 넘어감</li>
+</ul>
+<h3 id="ReAct" style="position:relative;">ReAct<a href="#ReAct" aria-label="ReAct permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>Reason &#x26; Action. 추론과 행동</li>
+<li>ReAct는 LLM과 결합하여 사용하는 일반적인 패러다임</li>
+<li>따라서 LLM은 질문에 대해 결과를 추론하고 결과를 얻기위해 행동함</li>
+<li>LLM의 프롬프팅 및 결과를 처리하는 방법 중 하나 (반드시 필요하진 않다는 뜻)</li>
+<li>모델 뿐 아니라 실제 세상의 정보들을 예측하는 용도로도 사용됨</li>
+<li>
+<p>시스템은 행동에 대한 계획을 생성, 유지 및 조정하는 동시에 외부 환경(예: Wikipedia)과의 상호 작용을 통해 추론에 추가 정보를 통합</p>
+<ul>
+<li>이러한 외부환경을 Agent와 Tool을 통해 제공</li>
+</ul>
+</li>
+<li>
+<p>ReAct의 예와 질문 답변을 수행하는데 필요한 도구의 예시
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 332px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e1e269da005f02e5c119e1d40707a250/f8dc5/ai-model2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 188.33333333333331%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAmCAYAAADEO7urAAAACXBIWXMAABYlAAAWJQFJUiTwAAAFPUlEQVRIx2WW6VYjOQyFM/QM0JC1sgNptrCHfScBEiB0EiBhb+CwnOkz7/8KGn8qVAT6h8u27HLpSlfXFUp4OekfiIiXzMuPH5MyM1OSqak5KRbnZGlpXfuJiRmZn1+W5eUNmZ0tyehoUVZWNqRQmJC1tW1nW5R0ekji8bSEojxCIYklsnJwcCytVkdOTppycXElnc6tHB835Ojop7TbN3J5eSe12qmsrm5Jo3HhDt2U8/MrfQcnPC8rIS+Zk3DUk3giI5VKTXZ3D9QzDl1f31EPdnYqbrytHprHeMV4bm5JD6YfHh6TUCo1JNncqKRSeRkYiEl/f0S+f49KX19Ye2vYaYODcYlEPN1Lzxx7JJL0PYy7xz+9/ZJwnk5NzevXFhfX1Mvt7YqUSqsav42NXefpfuAla5OTs+oZqPA6Gk1KKOag9nz7W6LxjMbs6upeTk9b8vz8r4vjtcaKOHU6N3J2dil7e4f60cPDYw0HMWYN2yfISechmcLtWCylIaAnc6zxdSACDRtzW7f9vB+CLmQ66QwJ5202OyKZzLBuGBkZD8a5XEHn+fwPtUGxoaFR3c86B2sMo/GU0gbIpP/m5kGhPT6+yt3dk45p9/dPOif7m5t7Ggrg3t4+OPgnerh6qJ45SAl3+tLSmiZgfHxa40PwadhIwNjYlL5Ig9R4Wyz6djzWA4lhOlNQt40iUIIeSoTDiYAuNGLX3VinMVbIZPmvnm8SdyW4tVWWarWulbG7u6/wGFNB2KENdGIOVZ6e3tROudLIgfKwr39AYZN6Nu7v1xzPyvoiNKHciFu5XFVeWv0SQz4yM7Og5Qh0hZzLjyk1gGSwGQPdh+/3ViUGn2oiHEYfhYxnA+GYqg3JKLoin55eCOqVSsAOJFSG4GPD062tPfUMZ4BLH6gN0Ksu/e32tVZLvd6S6+t7rRao1Gy2lT6UHFARkrOzjsaRw8m4emhZTjoPyTQN4kJYIzk9XzeSWxVZdRjBPS/j89BzLfnOdjZCARsDxeZ4YIdYmQb7XJ9Kj3RBdgJLRoHYarWdQJwpJESg2bxwFfGomYcBzKkqYJN5yO8l0pIZmvwQWK6CeRdsNhHohYUVpRF9o3HuKHSkCUHiTNJIErycde/lqGkXui61yX+igomqCWhvbzgQVmxGFVMd4Ce/CizUwCtElEvIPMUbqgi6YMNDSwrJsuY5lIHAEkPgoirQA2oQJ2L48vLb0ePVfWhdDwYmnv15YPazwALBsmoNG3SxbA4OJhQ6L5sY845ChtjdAgsVeJmGoBoX2cwc8tKQLuZ4SBWxP/DQBJZ7GeX49evZVcqdwqZigE4YgM11WqvV9e7Z3z9yatSQh4cXrSgOxttAYKEPNCAJ1DFjehSEuJVKK+oVKPAaL1mHSvDQkLyX3ohCRihNYE1tTGBNVeyywm6qwz7WNIa+wPaowEKJavVE4ZBxMox3aCSVwzrVhE5CLe4SayiU/tuYwNJzmRM7NiCcdiCXEyUJT+Eih0GdSqWqe/kId04A2QQWGCaq1rABkVCYuDL+uKf9Zve3L7CDvsBaoMkYX6QxLhTGFZLZ+VUxqnST+5026U+0QTChC4pjtIEyb2//6b0CvNfX3yoSX8vvi8D6AoqXUMDogQ1aYLdfku7fFjsoqJRugeWLxKNbYNlo96+9mE5//PdY2Vn7Q2C5U0xgEQcqg78v5vx+kF3+ZKkW1uv1ptIIFEEtR5wHCCy3XLl8qNKFZNFj88ebShsqg0NXVzdVxuxmtLCE/HgMB/ExmhgtuqujW1RtT/dvHfD/BwZqMWTCg/vNAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ai-modal2"
+        title="ai-modal2"
+        src="/static/e1e269da005f02e5c119e1d40707a250/f8dc5/ai-model2.png"
+        srcset="/static/e1e269da005f02e5c119e1d40707a250/070ae/ai-model2.png 120w,
+/static/e1e269da005f02e5c119e1d40707a250/8ff5a/ai-model2.png 240w,
+/static/e1e269da005f02e5c119e1d40707a250/f8dc5/ai-model2.png 332w"
+        sizes="(max-width: 332px) 100vw, 332px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>Template을 통해 Thought, Act, Obs가 반복됨을 볼 수 있음</li>
+<li>이러한 Template 형태로 보아 ReAct겠구나~ 에상 가능</li>
+<li>Search (아마 Goolge Search로 예상) Tool이 실행되고 있음을 알 수 있음</li>
+</ul>
+</li>
+</ul>
+<h3 id="LLM과-Agent" style="position:relative;">LLM과 Agent<a href="#LLM%EA%B3%BC-Agent" aria-label="LLM과 Agent permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>LLM - 학습된 데이터를 <code class="language-text">읽어서</code> 유저의 query 결과를 도출</li>
+<li>
+<p>Agent - 학습된 데이터와 유저가 추가한 데이터를 섞어서 query의 결과를 도출</p>
+<ul>
+<li>기본적인 template 만으로 수행할 수 없는 작업을 해줌</li>
+<li>데이터를 <code class="language-text">읽고 쓸 수</code> 있음</li>
+<li>또한 이 결과를 바탕으로 제공된 <code class="language-text">Tool</code> 목록에서 원하는 Tool을 골라 결과 도출에 사용함</li>
+<li>ex) 챗봇 - 고객의 정보와 유저가 필요한 정보(유저의 질문 query)를 조합해 결과를 도출</li>
+<li>ex) 웹검색을 해주는 툴, sql 쿼리를 작성해 정보를 제공해주는 툴 등등이 있음</li>
+</ul>
+</li>
+</ul>
+<h3 id="Memory" style="position:relative;">Memory<a href="#Memory" aria-label="Memory permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>
+<p>기본적으로 LLM 모델이 대화하는 내용들을 저장까지 하진 않음</p>
+<ul>
+<li>보통 chatGPT 모델을 쓰다보니 잊고있음. chatGPT는 자체적으로 Memorize 기능 지원</li>
+</ul>
+</li>
+<li>이는 채팅 이력을 기억하고 이를 기반으로 대화형 명령을 할 수 있도록 도와줌</li>
+</ul>
+<h3 id="RAG" style="position:relative;">RAG<a href="#RAG" aria-label="RAG permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=NfQrRQmDrcc" target="_blank" rel="noopener">https://www.youtube.com/watch?v=NfQrRQmDrcc</a></li>
+<li>검색 / 증강 / 생성</li>
+<li>검색 결과로 답변을 얻는 작업</li>
+<li>chatGPT 모델이 아닌 서비스가 RAG의 한 종류, 서비스라 보면 됨</li>
+<li>
+<p>전처리 (4개를 다 합하여 index 라고 부름)
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4d9e07902ca00079912e2a2b01627793/e8950/langchain-preprocess.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 41.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB/UlEQVQozy1S70/TUBTtZxXZujG6rbWjc1LUbbh23drS/WBszg0iY0ED2ZSICotGhfjbEBLQGLNE4wc1REwMRonwicT47x3ve/jh5LZ59513zrlXEJU8RPkYgTM2TksZ+CJZDMVcSJqHoOpgMGwQTIiKzXtY9Uct3su+pbjH+/3RHIRwooJnmx/x5dsh0u51DEgGIokyzhkt6GYLicwsNU9gMGKh0FjG880PqM6uwq84CJCYsezcMaw21At1CFZpEZ93D7C3/wfdu69wIjhOLxY5UeHKbcSSTa7SL+fQW3uN3e+HWH/ZR2jE4yrNUgfl6RV41KulGhBSdhufvv7Gz4O/mL/5BKeGDSh6BflKF/bUDRjFRU7I7N9//BbrL/pYI6jnq9wiI3Rqt+BeXkY83YQgnZ3EnQdb2Hq3g6Q9j5OhS4gn69im/zf9HTzdeE+5ORhSXejZNrfHKnMhkmotNQ23toSUcw3R0SkIylgNWnoGo5RZLNmgy3n4ZBurD7fxY/8IVxceUa4mWZxAqbmCauseJmd6PGcfWWaEe7+OsNTbgKh6EGS9hnFvgec1QoeikkNIKyBb7qA+1+ODYpNkU8wUOzDLXY4wEXKFJIbFc5HcyXoVQoCag2SJrQ2zNTCcoQFYhDzPk5GxlWEI0jlbG1Z9/9eG3WEbwFeKpv4PXjgRqX2euS0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="langchain-preprocess.png"
+        title="langchain-preprocess.png"
+        src="/static/4d9e07902ca00079912e2a2b01627793/e85cb/langchain-preprocess.png"
+        srcset="/static/4d9e07902ca00079912e2a2b01627793/070ae/langchain-preprocess.png 120w,
+/static/4d9e07902ca00079912e2a2b01627793/8ff5a/langchain-preprocess.png 240w,
+/static/4d9e07902ca00079912e2a2b01627793/e85cb/langchain-preprocess.png 480w,
+/static/4d9e07902ca00079912e2a2b01627793/37523/langchain-preprocess.png 720w,
+/static/4d9e07902ca00079912e2a2b01627793/d9199/langchain-preprocess.png 960w,
+/static/4d9e07902ca00079912e2a2b01627793/e8950/langchain-preprocess.png 2000w"
+        sizes="(max-width: 480px) 100vw, 480px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>
+<p>아래 4개의 프로세스가 LLM을 통한 서비스를 만들 때 기본적으로 사전에 이루어져야 하는 작업들</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"></code></pre></div>
+</li>
+<li>
+<p>LOAD</p>
+<ul>
+<li>파일들을 로드함</li>
+<li>여기서 파일은 유저의 입력 텍스트, text파일, json 파일, pdf 파일등등…</li>
+</ul>
+</li>
+<li>
+<p>SPLIT</p>
+<ul>
+<li>한번에 읽어들일 수 있는 토큰 수가 있기 때문에 파일을 모두 쪼개야 함. chunk파일로 분할</li>
+</ul>
+</li>
+<li>
+<p>EMBED</p>
+<ul>
+<li>이 파일들을 AI가 읽을 수 있도록 값으로 변환해주는 작업. 이 과정에 LLM 모델이 사용됨.</li>
+</ul>
+</li>
+<li>
+<p>STORE</p>
+<ul>
+<li>
+<p>vector db에 저장</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"></code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>서비스
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d32402b9116194c18df7ed254ea3fb37/79166/langchain-service.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 44.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB2UlEQVQoz42SS2sTYRSGZ2Frks5MpubWSUir0Aaby1wSY1Nsq3iZVqOpF1CxceGiaheCoC0qFReC9VIK0o34A5QKhS79EQr+Cv0Zj98lUboQXLzM+b5zznveeb9jmNkQMxtg5erYI419SLrHGM4LFJoir+v69f+C0SdLuo1eU6jIUsXjOHlNZI/UxXnqv0gV4V+yAFuQOzmf/PiMUNfAzGgCWZMWpEPiLAdIKBLZJ3oURJ0xlPGVQjU14+EejfCurHP++kPO3XpGMLekcvGURyLtK5KDw1UGkmUtIl3DTFU0RGyo3xttKZ8SaY9x/wIvt3e4ufqB59u7BJ1VYs4kJX+eUwtdBp0K1Wab5uw1MaSGNXYSa2JBwSzOYpTCi5zuLFObvoqV9RkLLvNo8wv1qUtE97ZYvLOOceAIj59u8O37DwaFurdbH9nd+0r8UJV49zOFd79w3/wk1t3RCh3xktIjUyh0y20WX+xx+8EGK68+cebGGgP2JBNexFy0pBSW/Ai/1SEmCK1CC3t0Bqt4ArMwrR9F+ii/0qPDlXlW1jZpL7/m7pP3lM/ex1L5EO13SEL4KT3t+658lBCxIS+tbPhnFeSq6Ds5IFB7qB8t6NUFinTfCuV6EPFvOxYQy2/kxwcAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="langchain-service.png"
+        title="langchain-service.png"
+        src="/static/d32402b9116194c18df7ed254ea3fb37/e85cb/langchain-service.png"
+        srcset="/static/d32402b9116194c18df7ed254ea3fb37/070ae/langchain-service.png 120w,
+/static/d32402b9116194c18df7ed254ea3fb37/8ff5a/langchain-service.png 240w,
+/static/d32402b9116194c18df7ed254ea3fb37/e85cb/langchain-service.png 480w,
+/static/d32402b9116194c18df7ed254ea3fb37/37523/langchain-service.png 720w,
+/static/d32402b9116194c18df7ed254ea3fb37/d9199/langchain-service.png 960w,
+/static/d32402b9116194c18df7ed254ea3fb37/79166/langchain-service.png 2012w"
+        sizes="(max-width: 480px) 100vw, 480px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"></code></pre></div>
+</li>
+<li>
+<p>Question</p>
+<ul>
+<li>유저가 질문을 함</li>
+</ul>
+</li>
+<li>
+<p>RETRIEVE</p>
+<ul>
+<li>embed에서 질문을 바탕으로 필요한 내용을 발췌</li>
+</ul>
+</li>
+<li>
+<p>PROMPT</p>
+<ul>
+<li>발췌된 내용과 PROMPT에 정의된 내용을 바탕으로 LLM에 질의할 내용을 만듬</li>
+</ul>
+</li>
+<li>
+<p>LLM</p>
+<ul>
+<li>
+<p>만들어진 질의 내용을 가지고 LLM조회를 하여 답변을 해줌</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>전처리 단계 조합</p>
+<ul>
+<li>
+<p>LOAD(150여 가지) -> SPLIT(10여 가지) -> EMBED(60여 가지) -> STORE(80여 가지) -> 360,000,000 경우의 수 조합이 가능함</p>
+<ul>
+<li>문서를 LOAD하는 전략이 150여 가지 (text, json, pdf 등등…)</li>
+<li>text SPLIT하는 전략이 10여가지</li>
+<li>문서를 EMBED하는 전략(모델)이 60여가지 (기본 60여 가지지만, <a href="https://huggingface.co/" target="_blank" rel="noopener">https://huggingface.co/</a> 를 보면 이 전략이 엄청나게 많음…)</li>
+<li>EMBED된 문서를 Vector Store에 저장할 때의 Vector DB의 종류가 80여 가지</li>
+<li>Vector DB를 조회하기 위한 RETRIEVE 단계의 Vector DB 검색기 종류가 50여 가지</li>
+</ul>
+</li>
+<li>위에 기본 가지수는 랭체인 사용시 기본적으로 사용 가능한 개수들</li>
+<li>이렇게 많은 경우의 수가 있다…? => 결론은 다 테스트 해볼 순 없다!</li>
+<li>상황에 맞는 적절한 조합을 찾는게 중요하다.</li>
+</ul>
+</li>
+<li>
+<p>LOAD (PDF 기준)</p>
+<ul>
+<li>
+<p>선택시 고려 사항</p>
+<ul>
+<li>
+<p>텍스트를 원형 그대로 잘 가져오는지</p>
+<ul>
+<li>한글 인코딩</li>
+<li>특수문자, 수식</li>
+</ul>
+</li>
+<li>
+<p>메타데이터 종류</p>
+<ul>
+<li>본문 뿐만 아니라 페이지 번호, 차트, 좌표, 속성값 등등 모두 잘 가져오는지</li>
+<li>부가 메타데이터 속성들</li>
+</ul>
+</li>
+<li>문서를 읽는 속도</li>
+</ul>
+</li>
+<li>
+<p>종류</p>
+<ul>
+<li>fitz</li>
+<li>PyPDFLoader</li>
+<li>UnstructuredPDFLoader</li>
+<li>PDFPlumnber</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>SPLIT (Text Splitter)</p>
+<ul>
+<li>문서를 특정 기준으로 분할(chunk)할 때 활용</li>
+<li>
+<p>종류</p>
+<ul>
+<li>CharacterTextSplitter</li>
+<li>RecursiveCharacterTextSplitter</li>
+<li>TokenTextSplitter</li>
+<li>HuggingFace</li>
+<li>SemanticChunker (experimental)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>EMBED</p>
+<ul>
+<li>EMBED 이후 Vector Store에 저장해야 하는데, 저장 후 Semantic Search (의미 검색)과 같은 작업을 수행할 때 유용하게 사용할 수 있음.</li>
+<li>이 기능을 잘 활용하기 위해 잘 맞는 모델을 선택하는게 중요.</li>
+<li>또한 한국어도 가능하게 해야 하므로!! (optional)</li>
+<li>
+<p>랭체인의 EMBED 클래스는 두가지 메서드 존재</p>
+<ul>
+<li>문서를 import해서 DB에 넣을 때의 embed</li>
+<li>유저가 질문을 query 할때의 embed</li>
+<li>결국 위 2가지 embed된 내용의 유사성을 조사하는 것</li>
+</ul>
+</li>
+<li>가끔 위 두가지 메서드의 모델이 다른 경우가 있음. 그럼 유사성을 조사할 때 유사도가 떨어질 수 있으니 주의.</li>
+<li>
+<p>종류</p>
+<ul>
+<li>
+<p>OpenAIEmbedding</p>
+<ul>
+<li>보통은 이걸 사용. 무난. 사용성 좋음. 한글처리 좋음.</li>
+<li>다른 embedding 모델과 다르게 로컬에 저장해서 gpu를 쓰지 않음. (Api 형식)</li>
+<li>과금 압박이 생길 수 있음</li>
+</ul>
+</li>
+<li>
+<p>CacheBackedEmbeddings</p>
+<ul>
+<li>임베딩을 저장하거나 캐시해서 다시 계산할 필요가 없도록 해줌 (key-value)</li>
+<li>텍스트는 해시되서 캐시키로 사용</li>
+<li>캐시된 embedding 벡터 가져오는건 거의 0초에 수렴. 매우 빠름</li>
+<li>여러 모델을 사용하는 경우, namespace를 설정해서 캐시 가능</li>
+<li>ex1) openAiEmbedding으로 동일 문서를 10명이 조회한 경우 or 1명이 10번 조회한 경우 => 10번의 비용 발생</li>
+<li>ex2) openAiEmbedding + CacheBackedEmbeddings으로 같은 문서를 10, 100번 조회 => 캐시를 위한 1번의 비용만 발생</li>
+</ul>
+</li>
+<li>hugging face에서 벤치마크 점수만 믿으면 안됨. 우리는 한글도 처리해야 하니까…!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Vector Store</p>
+<ul>
+<li>확장성 있게 -> 클라우드 / 여러 사람이 자주, 빈번하게 조회 -> 로컬</li>
+<li>모델에 따라 고유 특성이 있고, 방대한 데이터 입/출에 대한 관리가 필요</li>
+<li>
+<p>인기 있는 Vector DB</p>
+<ul>
+<li>
+<p>클라우드</p>
+<ul>
+<li>PineCone</li>
+<li>Weaviate</li>
+<li>ElasticSearch</li>
+</ul>
+</li>
+<li>
+<p>로컬</p>
+<ul>
+<li>Chroma</li>
+<li>FAISS (meta) => 캐글 1등 팀이 썼었음</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></section><hr style="margin-bottom:1.625rem"/><footer style="color:#898989"><p scale="[object Object]" class="PostTags__StyledPTags-sc-1ielp4x-0 kRNYYT">#langchain <!-- -->#ai <!-- -->#framework </p></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"></ul></nav></main><footer style="text-align:center"><span style="display:inline-block;width:2.275rem;vertical-align:top;margin:0 10px"><a href="https://github.com/jicjjang" target="_blank"><img src="/static/b33838e421fcf2eaeb2da472c1e32060/github.png" style="display:block;width:100%"/></a></span><span style="display:inline-block;width:2.275rem;vertical-align:top;margin:0 10px"><a href="https://www.linkedin.com/in/jicjjang" target="_blank"><img src="/static/3e51027afe6b45fb6d7b38b1e194dcbb/linkedin.png" style="display:block;width:100%"/></a></span><span style="display:inline-block;width:2.275rem;vertical-align:top;margin:0 10px"><a href="https://www.instagram.com/jicjjang" target="_blank"><img src="/static/64b2774f0c50daac23fd881877dae854/instagram.png" style="display:block;width:100%"/></a></span><span style="display:inline-block;width:2.275rem;vertical-align:top;margin:0 10px"><a href="mailto:jicjjang12@gmail.com" target="_blank"><img src="/static/ababfdf6167a3ee6c8f91dd6d29c765d/mail.png" style="display:block;width:100%"/></a></span></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-59806888-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/langchain-ai-concept";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-77c8fcefe79961b4834e.js"],"app":["/app-546e1f3dac184980066b.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-9023e69c8b9c141f86eb.js"],"component---src-pages-archive-tsx":["/component---src-pages-archive-tsx-ba6595d573a79b6a7435.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-0d707984196c022fbb95.js"],"component---src-pages-presentation-1-tsx":["/component---src-pages-presentation-1-tsx-d7d3381e6cc5e66102e1.js"],"component---src-pages-presentation-2-tsx":["/component---src-pages-presentation-2-tsx-6631b7f7b0abaab3bec7.js"],"component---src-pages-presentation-3-tsx":["/component---src-pages-presentation-3-tsx-7401971b6907d4d1e893.js"],"component---src-pages-presentation-4-tsx":["/component---src-pages-presentation-4-tsx-f21f2e1cabb85ae33d8d.js"],"component---src-pages-presentation-5-tsx":["/component---src-pages-presentation-5-tsx-aefebc70c329bb020718.js"],"component---src-pages-presentation-6-tsx":["/component---src-pages-presentation-6-tsx-7c0456a8cf79732c517c.js"],"component---src-pages-presentation-7-tsx":["/component---src-pages-presentation-7-tsx-98a6233bd3b693d8c606.js"],"component---src-pages-presentation-8-tsx":["/component---src-pages-presentation-8-tsx-c6732a60ad07f7dc496f.js"],"component---src-pages-presentation-9-tsx":["/component---src-pages-presentation-9-tsx-13a4713bccc904511ac4.js"],"component---src-pages-presentation-index-tsx":["/component---src-pages-presentation-index-tsx-c82cefae43f93c2c44e7.js"],"component---src-pages-resume-tsx":["/component---src-pages-resume-tsx-2ae78d455f901d50ffa3.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-98fb5b1bc6b857075e3e.js"]};/*]]>*/</script><script src="/polyfill-77c8fcefe79961b4834e.js" nomodule=""></script><script src="/component---src-templates-post-template-tsx-98fb5b1bc6b857075e3e.js" async=""></script><script src="/96d63672732fbc000942c853d1f1d8bc5d3b9750-d9b07ebd0aed616bc44b.js" async=""></script><script src="/f6b66f032c82d0fe30c6a2c7af7bedaaf1113f84-7dd933e8bd2a66a9062b.js" async=""></script><script src="/app-546e1f3dac184980066b.js" async=""></script><script src="/framework-2d6b7d2e2be378715b78.js" async=""></script><script src="/styles-77e32ee8d6888701d03f.js" async=""></script><script src="/webpack-runtime-d3c9683e72acd6a76f3e.js" async=""></script></body></html>
