@@ -1,6 +1,6 @@
 ---
 title: "Flutter로 앱개발 시작하기"
-date: "2023-11-13
+date: "2023-11-13"
 tags: [flutter, android, ios]
 ---
 

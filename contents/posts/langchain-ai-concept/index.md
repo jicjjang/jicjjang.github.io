@@ -1,6 +1,6 @@
 ---
 title: "LangChain AI에 대한 개념"
-date: "2024-06-09
+date: "2024-06-09"
 tags: [langchain, ai, framework]
 ---
 
