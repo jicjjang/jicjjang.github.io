@@ -1,7 +1,7 @@
 ---
 title: "이미지에 QR Code 숨겨넣기"
 date: "2024-07-03"
-tags: [javascript, basic, hoisting]
+tags: [python, image, hide, qr, qrcode]
 ---
 
 - 무슨 기술인가
