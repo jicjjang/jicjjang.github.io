@@ -1,0 +1,590 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.625 -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}h1{margin-left:0;margin-right:0;margin-top:2.4375rem;padding-bottom:calc(0.40625rem - 1px);padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.21875rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;border-bottom:1px solid hsla(0,0%,0%,0.07);}h2{margin-left:0;margin-right:0;margin-top:1.625rem;padding-bottom:calc(0.40625rem - 1px);padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.40625rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;border-bottom:1px solid hsla(0,0%,0%,0.07);}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:hsla(0,0%,0%,0.53);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}ul{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:0.85rem;line-height:1.625rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:1rem;line-height:1.625rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}blockquote{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:calc(0.8125rem - 1px);padding-right:0;padding-top:0;margin-bottom:0.8125rem;border-left:4px solid hsla(0,0%,0%,0.13);color:hsla(0,0%,0%,0.53);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(0.8125rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}b{font-weight:600;}strong{font-weight:600;}dt{font-weight:600;}th{font-weight:600;}li{margin-bottom:calc(0.8125rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}li > ul{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(0.8125rem / 2);}code{font-size:0.85rem;line-height:1.625rem;}kbd{font-size:0.85rem;line-height:1.625rem;}samp{font-size:0.85rem;line-height:1.625rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.08333rem;padding-right:1.08333rem;padding-top:0.8125rem;padding-bottom:calc(0.8125rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}h3,h4,h5,h6{margin-bottom:0.8125rem;margin-top:1.625rem;}ol,ul{margin-left:2.03125rem;}li>ol,li>ul{margin-left:2.03125rem;}a{color:#4078c0;text-decoration:none;}a:hover,a:active{text-decoration:underline;}</style><style data-href="/styles.8bc7d8bd447b1029c4d8.css" id="gatsby-global-css">code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.gatsby-highlight-code-line{background-color:rgba(27,31,35,.05);display:block;margin-right:-1em;margin-left:-1em;padding-right:1em;padding-left:.75em;border-left:.25em solid #f99}.gatsby-highlight{background-color:#f6f8fa;border-radius:.3em;margin:.5em 0;padding:1em;overflow:auto}.gatsby-highlight pre[class*=language-]{background-color:transparent;margin:0;padding:0;overflow:initial;float:left;min-width:100%}:not(pre)>code[class*=language-]{background:rgba(27,31,35,.05)}</style><meta name="generator" content="Gatsby 2.29.1"/><style data-styled="" data-styled-version="5.2.1">.cURDtm{margin-top:0;margin-bottom:1.95rem;}/*!sc*/
+data-styled.g1[id="Header__StyledHeader-sc-1tyi3z1-0"]{content:"cURDtm,"}/*!sc*/
+.fEA-DoH{display:inline-block;margin:0;font-size:2.2974rem;line-height:3.25rem;}/*!sc*/
+data-styled.g2[id="Header__StyledH3-sc-1tyi3z1-1"]{content:"fEA-DoH,"}/*!sc*/
+.ifejFH{box-shadow:none;-webkit-text-decoration:none;text-decoration:none;color:#000;}/*!sc*/
+data-styled.g3[id="Header__StyledLink-sc-1tyi3z1-2"]{content:"ifejFH,"}/*!sc*/
+.joNmkD{float:right;display:inline-block;margin:18px 0;}/*!sc*/
+.joNmkD:after{content:'';display:table;clear:both;}/*!sc*/
+@media (max-width:650px){.joNmkD{display:block;float:none;text-align:center;border-bottom:2px solid #cfcdcd;}}/*!sc*/
+data-styled.g4[id="Header__StyledUl-sc-1tyi3z1-3"]{content:"joNmkD,"}/*!sc*/
+.bDvteE{display:inline-block;padding:0 15px;list-style-type:none;vertical-align:middle;font-size:16px;}/*!sc*/
+@media (max-width:450px){.bDvteE{padding:0 8px;font-size:14px;}}/*!sc*/
+data-styled.g5[id="Header__StyledLi-sc-1tyi3z1-4"]{content:"bDvteE,"}/*!sc*/
+.ddEDAJ{color:#898989;}/*!sc*/
+data-styled.g6[id="Header__StyleLiLink-sc-1tyi3z1-5"]{content:"ddEDAJ,"}/*!sc*/
+.iomvtc{margin:0 auto;max-width:39rem;min-width:320px;padding:2.275rem 1.21875rem;}/*!sc*/
+data-styled.g7[id="Default__StyledDiv-sc-1g8e1t0-0"]{content:"iomvtc,"}/*!sc*/
+.kiCxlO{margin-bottom:6.5rem;}/*!sc*/
+data-styled.g8[id="Default__StyledMain-sc-1g8e1t0-1"]{content:"kiCxlO,"}/*!sc*/
+.jRNtTT{color:#000;margin-bottom:0.325rem;border-bottom:none;font-size:1.41421rem;font-weight:500;line-height:2.4375rem;}/*!sc*/
+data-styled.g9[id="common__StyledCommonH1Title-sc-93z372-0"]{content:"jRNtTT,"}/*!sc*/
+.kRNYYT{color:#898989;font-size:0.93303rem;line-height:1.625rem;}/*!sc*/
+data-styled.g13[id="PostTags__StyledPTags-sc-1ielp4x-0"]{content:"kRNYYT,"}/*!sc*/
+.jcyDuJ{margin-bottom:1.95rem;}/*!sc*/
+data-styled.g15[id="PostHeader__StyledHeader-sc-77g6iv-0"]{content:"jcyDuJ,"}/*!sc*/
+.hOBBqs{display:inline-block;width:30px;height:30px;background-image:url(/img/post/speaker.png);background-size:22px;background-repeat:no-repeat;background-position:6px 10px;}/*!sc*/
+.hOBBqs:active{background-position:6px 11px;}/*!sc*/
+data-styled.g17[id="PostHeader__StyledSpeechSpan-sc-77g6iv-2"]{content:"hOBBqs,"}/*!sc*/
+.ivMKzM{color:#898989;font-size:0.93303rem;line-height:1.625rem;}/*!sc*/
+data-styled.g18[id="PostHeader__StyledTime-sc-77g6iv-3"]{content:"ivMKzM,"}/*!sc*/
+</style><style type="text/css">
+    .autolink-headers--.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .autolink-headers--.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .autolink-headers-- svg,
+    h2 .autolink-headers-- svg,
+    h3 .autolink-headers-- svg,
+    h4 .autolink-headers-- svg,
+    h5 .autolink-headers-- svg,
+    h6 .autolink-headers-- svg {
+      visibility: hidden;
+    }
+    h1:hover .autolink-headers-- svg,
+    h2:hover .autolink-headers-- svg,
+    h3:hover .autolink-headers-- svg,
+    h4:hover .autolink-headers-- svg,
+    h5:hover .autolink-headers-- svg,
+    h6:hover .autolink-headers-- svg,
+    h1 .autolink-headers--:focus svg,
+    h2 .autolink-headers--:focus svg,
+    h3 .autolink-headers--:focus svg,
+    h4 .autolink-headers--:focus svg,
+    h5 .autolink-headers--:focus svg,
+    h6 .autolink-headers--:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><title data-react-helmet="true">June | June</title><link data-react-helmet="true" rel="shortcut icon" type="image/png" href="/static/486b14f334fc4c84f7c22a7629f637d5/c5e7c/favicon.png"/><meta data-react-helmet="true" name="og:title" property="og:title" content="June"/><meta data-react-helmet="true" name="og:site_name" property="og:site_name" content="June"/><meta data-react-helmet="true" name="og:url" property="og:url" content="https://jicjjang.github.io"/><meta data-react-helmet="true" name="og:description" property="og:description" content="무슨 기술인가 사실 별거 없음 그리고 누군가 만들어 놓은 코드가 있음 ⇒ https://github.com/redris96/QRHide…"/><meta data-react-helmet="true" name="description" property="description" content="무슨 기술인가 사실 별거 없음 그리고 누군가 만들어 놓은 코드가 있음 ⇒ https://github.com/redris96/QRHide…"/><meta data-react-helmet="true" name="og:type" property="og:type" content="website"/><meta data-react-helmet="true" name="og:image" property="og:image"/><meta data-react-helmet="true" name="twitter:description" property="twitter:description" content="무슨 기술인가 사실 별거 없음 그리고 누군가 만들어 놓은 코드가 있음 ⇒ https://github.com/redris96/QRHide…"/><meta data-react-helmet="true" name="twitter:title" property="twitter:title" content="June"/><meta data-react-helmet="true" name="twitter:url" property="twitter:url" content="https://jicjjang.github.io"/><meta data-react-helmet="true" name="twitter:site" property="twitter:site" content="https://jicjjang.github.io"/><meta data-react-helmet="true" name="twitter:domain" property="twitter:domain" content="https://jicjjang.github.io"/><meta data-react-helmet="true" name="twitter:image" property="twitter:image"/><link as="script" rel="preload" href="/webpack-runtime-7063b288c2020be4fd72.js"/><link as="script" rel="preload" href="/styles-77e32ee8d6888701d03f.js"/><link as="script" rel="preload" href="/framework-2d6b7d2e2be378715b78.js"/><link as="script" rel="preload" href="/app-546e1f3dac184980066b.js"/><link as="script" rel="preload" href="/f6b66f032c82d0fe30c6a2c7af7bedaaf1113f84-7dd933e8bd2a66a9062b.js"/><link as="script" rel="preload" href="/96d63672732fbc000942c853d1f1d8bc5d3b9750-d9b07ebd0aed616bc44b.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-tsx-98fb5b1bc6b857075e3e.js"/><link as="fetch" rel="preload" href="/page-data/posts/hide-qr-code/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1576648375.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1963346411.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Default__StyledDiv-sc-1g8e1t0-0 iomvtc"><header class="Header__StyledHeader-sc-1tyi3z1-0 cURDtm"><h3 scale="[object Object]" class="Header__StyledH3-sc-1tyi3z1-1 fEA-DoH"><a class="Header__StyledLink-sc-1tyi3z1-2 ifejFH" href="/">June</a></h3><ul class="Header__StyledUl-sc-1tyi3z1-3 joNmkD"><li class="Header__StyledLi-sc-1tyi3z1-4 bDvteE"><a class="Header__StyleLiLink-sc-1tyi3z1-5 ddEDAJ" href="/">Posts</a></li><li class="Header__StyledLi-sc-1tyi3z1-4 bDvteE"><a class="Header__StyleLiLink-sc-1tyi3z1-5 ddEDAJ" href="/archive">Archive</a></li><li class="Header__StyledLi-sc-1tyi3z1-4 bDvteE"><a class="Header__StyleLiLink-sc-1tyi3z1-5 ddEDAJ" href="/presentation">Presentation</a></li></ul></header><main class="Default__StyledMain-sc-1g8e1t0-1 kiCxlO"><article class="post_article"><header class="PostHeader__StyledHeader-sc-77g6iv-0 jcyDuJ"><h1 scale="[object Object]" class="common__StyledCommonH1Title-sc-93z372-0 jRNtTT">이미지에 QR Code 숨겨넣기<span class="PostHeader__StyledSpeechSpan-sc-77g6iv-2 hOBBqs"></span></h1><p class="post-meta"><time dateTime="July 29, 2021" scale="[object Object]" class="PostHeader__StyledTime-sc-77g6iv-3 ivMKzM">July 29, 2021</time></p></header><section><ul>
+<li>
+<p>무슨 기술인가</p>
+<ul>
+<li>사실 별거 없음</li>
+<li>
+<p>그리고 누군가 만들어 놓은 코드가 있음 ⇒ <a href="https://github.com/redris96/QRHide" target="_blank" rel="noopener">https://github.com/redris96/QRHide</a></p>
+<ul>
+<li>바꾼 코드가 사실상 없으나, 우리 서비스에 사용할수도 있고 활용할 영역이 많아보이는 기술이라 공유</li>
+</ul>
+</li>
+<li>지인이 일하는 회사 웹툰 서비스에서 <code class="language-text">이미지 내 qrcode가 숨겨져 있다!</code> 라는 말을 듣고 파보기 시작</li>
+<li>Base Image에 QR Code를 숨기는 작업을 해야됨</li>
+</ul>
+</li>
+</ul>
+<h3 id="Base-image" style="position:relative;">Base image<a href="#Base-image" aria-label="Base image permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 360px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f16618334500904890912dc645925b0d/f21e7/qr-base1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 186.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,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'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="qr-base1"
+        title="qr-base1"
+        src="/static/f16618334500904890912dc645925b0d/f21e7/qr-base1.png"
+        srcset="/static/f16618334500904890912dc645925b0d/070ae/qr-base1.png 120w,
+/static/f16618334500904890912dc645925b0d/8ff5a/qr-base1.png 240w,
+/static/f16618334500904890912dc645925b0d/f21e7/qr-base1.png 360w"
+        sizes="(max-width: 360px) 100vw, 360px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3 id="QR-Code" style="position:relative;">QR Code<a href="#QR-Code" aria-label="QR Code permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d40a96d3bfce287e6882d90f43c24c3e/41be6/qr1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 95%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAADN0lEQVQ4y6VU2St0YRyeP2DKpVtcuJiylEJK2SJbQ1lLWSNZs0RkCIVkrAk19j1CtiEXliaiiLLcmaQoyoWtZDzf9/zqnL5pvjunTu97zvmd5/09y/tq8Pf6+fnBby8FQ6NMOL6/v+Pt7Q3f39/qu6+vL7sf+cz3n5+feH19Vb+rgDabTSZdXV1oampCd3c3DAYDrq6uMDU1hcPDQ0RFRaG2thbj4+MoLi7GzMwMqqurMTg4iLKyMlxeXgoGsdQOOzo6kJ2dDb1eL/PKykqEhYXJTwEBAUhKSkJCQgJ6enqwsbGBoqIihIeHo6amBhaLRTDITAXs7OxEVlYWoqOjBbCkpASurq7w8fHB6empLEDwg4MDjI6Oory8HEFBQairq7MHVCj39vYKZWUkpcjISERERGBlZQX9/f3IyMhAfn4+WlpaUF9fD5PJhNLSUlxcXDhSpl6tra2iF1c9OTmBi4sLqqqqRLvc3FzpikDslPIkJibi+PhYBRNTFEfj4uKwsLCA8/NzMWV1dRV5eXmik5OTk4wE2t7eloXZObVdWlqSZChOq5RZRE2mp6exs7MDPz8/+Pr6ivgUPj09Xaizw+DgYFRUVGB9fR3X19d4fn52BDQajUKPVAhCvfr6+kTPo6Mj+c6OY2Njsbe3J5LQuMDAQFitVkcNJycnsba2hvn5eXh7e+Ps7EwyyLjw3eLioqSAeSSLzMxMqW9sbJTMOgDSsZiYGKHW3t6Ou7s7yRtBnJ2dherW1pZ0Ozs7i4GBAQGn4/91mU6ykLEwm82SNZ1OJ1rRpOTkZNGWzrq7u8PT01Nq5+bmVP3sNJyYmMDIyAjGxsakQ5oUGhoqedzc3ERKSgp2d3eRk5Mj9FkTEhIi47/ngdphc3MzCgsLJW9tbW3SCekwk6RHhxkrrVYr5rGO+9jf31/dy+rW4z00NITU1FSJCztNS0uDm5ub7JaCggKhPDw8LPSXl5flENnf35dFPz4+HGPDrFGvhoYG6ZQh1mg08PLykt0QHx8vESJ1LsY97eHhIVv15eXF0ZSnpycJKe/7+3t55vjw8CCFDC/vm5sb3N7e4vHxUc2f3Xn42xNbkUyZ/wHA0IoSCh8C9gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="qr1"
+        title="qr1"
+        src="/static/d40a96d3bfce287e6882d90f43c24c3e/e85cb/qr1.png"
+        srcset="/static/d40a96d3bfce287e6882d90f43c24c3e/070ae/qr1.png 120w,
+/static/d40a96d3bfce287e6882d90f43c24c3e/8ff5a/qr1.png 240w,
+/static/d40a96d3bfce287e6882d90f43c24c3e/e85cb/qr1.png 480w,
+/static/d40a96d3bfce287e6882d90f43c24c3e/41be6/qr1.png 638w"
+        sizes="(max-width: 480px) 100vw, 480px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h1 id="방법" style="position:relative;">방법<a href="#%EB%B0%A9%EB%B2%95" aria-label="방법 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ul>
+<li>Base Image + QR Code를 더해서 인코딩을 함</li>
+<li>인코딩 결과물을 디코딩 해보면 QR Code가 노출됨</li>
+<li>
+<p>이러한 기능이 필요한 이유 / 어디에 적용할 수 있을까</p>
+<ul>
+<li>
+<p>불펌된 이미지의 히스토리를 추적할 수 있음</p>
+<ul>
+<li>당연히!!! 화면 캡쳐해서 퍼가도 이미지 자체 pixel에 인코딩이 되어있기 때문에 QR Code도 딸려감</li>
+<li><del>QR Code에 현재 로그인한 유저의 ID와 같은 식별값을 심을 수 있고, 불펌된 이미지를 찾아서 이를 바탕으로 💸💸💸 <strong>고 소 미</strong> 💸💸💸 가능!!! ㅋㅋㅋ</del></li>
+</ul>
+</li>
+<li>
+<p>이런 기능을 미리 알았더라면 모먼티카 서비스에서 테이크마다 심어서 불펌을 체크할 수 있지 않았을까!!!</p>
+<ul>
+<li>물론 이제 시작할 스타크로니클, 버디에도 적용 가능</li>
+</ul>
+</li>
+<li>심지어 코드가 어렵지도 않음!!</li>
+</ul>
+</li>
+</ul>
+<h1 id="Encode-개발-코드" style="position:relative;">Encode 개발 코드<a href="#Encode-%EA%B0%9C%EB%B0%9C-%EC%BD%94%EB%93%9C" aria-label="Encode 개발 코드 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token comment"># encode.py</span>
+<span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+<span class="token keyword">import</span> sys
+
+base_image <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'./image.png'</span><span class="token punctuation">)</span>
+loaded_base_image <span class="token operator">=</span> base_image<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+qr_image <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'./code.png'</span><span class="token punctuation">)</span>
+loaded_qr_image <span class="token operator">=</span> qr_image<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> base_image<span class="token punctuation">.</span>size <span class="token operator">&lt;</span> qr_image<span class="token punctuation">.</span>size<span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"QR Code 이미지의 크기는 Base 이미지의 크기보다 작아야 합니다."</span><span class="token punctuation">)</span>
+	sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'0000'</span><span class="token punctuation">,</span> base_image<span class="token punctuation">.</span>size<span class="token punctuation">)</span>
+<span class="token comment"># 0000 (360, 672)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'1111'</span><span class="token punctuation">,</span> qr_image<span class="token punctuation">.</span>size<span class="token punctuation">)</span>
+<span class="token comment"># 1111 (200, 200)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'2222'</span><span class="token punctuation">,</span> loaded_qr_image<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> loaded_qr_image<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># 2222 (255, 255, 255, 255) 255</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'3333'</span><span class="token punctuation">,</span> loaded_base_image<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>loaded_base_image<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># 3333 (226, 231, 227, 255), 939</span>
+
+
+<span class="token comment"># qr code image width/height 만큼 이중 for문을 돌음. x, y 좌표 한픽셀씩 돌아가겠다는 의미</span>
+<span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>qr_image<span class="token punctuation">.</span>size<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">for</span> y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>qr_image<span class="token punctuation">.</span>size<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+		base_image_pixel <span class="token operator">=</span> loaded_base_image<span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span> <span class="token comment"># base image의 한 픽셀</span>
+		change <span class="token operator">=</span> <span class="token boolean">False</span>
+
+		<span class="token comment"># qr code image	는 흑/백만 있는 것으로 합니다. (이 말은 색이 포함된 qr code는 사용 X)</span>
+		<span class="token comment"># loaded_qr_image[x, y]는 한 픽셀의 컬러값. 0번째 요소는 RGB의 R을 나타냄</span>
+		<span class="token keyword">if</span> loaded_qr_image<span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+			<span class="token comment"># R 값이 True이면 넘어옴. 흑/백이므로 0 or 255인데, 0일땐 False</span>
+			<span class="token comment"># base_image_pixel의 sum은 R, G, B 색상 모두를 더한 값</span>
+			<span class="token comment"># base_image_pixel의 sum % 2는 0, 1이 나올 수 있고,</span>
+			<span class="token comment"># 이는 흑 백을 나누기 위해 체크를 함</span>
+			<span class="token comment"># if loaded_qr_image[x, y][0]: => 현재 QR이 흰색일 때의 케이스</span>
+			<span class="token keyword">if</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>base_image_pixel<span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">:</span>
+				<span class="token comment"># RGB 합산의 mod 2는 0일때 흑, 1일때 백 임을 나타냄</span>
+				<span class="token comment"># mod 연산 후 1일때 True</span>
+				<span class="token comment"># QR이 백 인데 Base 이미지 같은 위치 픽셀이 mod 연산 시 1(255, 백)인 케이스 => 넘어감</span>
+				<span class="token keyword">continue</span>
+			<span class="token keyword">else</span><span class="token punctuation">:</span>
+				<span class="token comment"># QR이 백 인데 Base 이미지 같은 위치 픽셀이 mod 연산 시 0(0, 흑)인 케이스 => 변경</span>
+				change <span class="token operator">=</span> <span class="token boolean">True</span>
+		<span class="token keyword">else</span><span class="token punctuation">:</span>
+			<span class="token comment"># :else => 현재 QR이 검은색일 때의 케이스</span>
+			<span class="token keyword">if</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>base_image_pixel<span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">:</span>
+				<span class="token comment"># QR이 흑 인데 Base 이미지 같은 위치 픽셀이 mod 연산 시 1(255, 백)인 케이스 => 변경</span>
+				change <span class="token operator">=</span> <span class="token boolean">True</span>
+			<span class="token keyword">else</span><span class="token punctuation">:</span>
+				<span class="token comment"># QR이 흑 인데 Base 이미지 같은 위치 픽셀이 mod 연산 시 0(0, 흑)인 케이스 => 넘어감</span>
+				<span class="token keyword">continue</span>
+		<span class="token keyword">if</span> change<span class="token punctuation">:</span>
+			<span class="token comment"># change가 True일 때, R 값을 1만 낮춤</span>
+			<span class="token comment"># 1만 변경해주면 색상에 크게 영향이 가지 않음</span>
+			<span class="token comment"># 추후 decoding 시, mod 연산으로 흑백 픽셀만 찍히게 작업한다면?</span>
+			<span class="token comment"># QR 코드 영역은 제대로 나오게 됨</span>
+			loaded_base_image<span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>base_image_pixel<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> base_image_pixel<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> base_image_pixel<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+base_image<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'encoded_image.png'</span><span class="token punctuation">)</span></code></pre></div>
+<h1 id="decode-개발-코드" style="position:relative;">decode 개발 코드<a href="#decode-%EA%B0%9C%EB%B0%9C-%EC%BD%94%EB%93%9C" aria-label="decode 개발 코드 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token comment"># decode.py</span>
+<span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+
+encode_base_image <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'encoded_image.png'</span><span class="token punctuation">)</span>
+loaded_encode_base_image <span class="token operator">=</span> encode_base_image<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># encode image width/height 만큼 이중 for문을 돌음. x, y 좌표 한픽셀씩 돌아가겠다는 의미</span>
+<span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>encode_base_image<span class="token punctuation">.</span>size<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">for</span> y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>encode_base_image<span class="token punctuation">.</span>size<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+		<span class="token keyword">if</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>loaded_encode_base_image<span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">:</span>
+			<span class="token comment"># encode때 했던 mod 연산을 동일하게 처리</span>
+			<span class="token comment"># mod 연산 시 1 => 흰색으로 변환</span>
+			loaded_encode_base_image<span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span>
+		<span class="token keyword">else</span><span class="token punctuation">:</span>
+			<span class="token comment"># mod 연산 시 0 => 검은색으로 변환</span>
+			loaded_encode_base_image<span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+
+encode_base_image<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'decoded_image.png'</span><span class="token punctuation">)</span></code></pre></div>
+<h1 id="결과물" style="position:relative;">결과물<a href="#%EA%B2%B0%EA%B3%BC%EB%AC%BC" aria-label="결과물 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ul>
+<li>Base Image + QR Code를 더해서 인코딩을 함</li>
+<li>인코딩 결과물을 디코딩 해보면 QR Code가 노출됨</li>
+</ul>
+<h3 id="Encode-image" style="position:relative;">Encode image<a href="#Encode-image" aria-label="Encode image permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 360px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5b8435a6b47b0fc6339cf85b34f34209/f21e7/encode-image.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 186.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,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'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="encode-image"
+        title="encode-image"
+        src="/static/5b8435a6b47b0fc6339cf85b34f34209/f21e7/encode-image.png"
+        srcset="/static/5b8435a6b47b0fc6339cf85b34f34209/070ae/encode-image.png 120w,
+/static/5b8435a6b47b0fc6339cf85b34f34209/8ff5a/encode-image.png 240w,
+/static/5b8435a6b47b0fc6339cf85b34f34209/f21e7/encode-image.png 360w"
+        sizes="(max-width: 360px) 100vw, 360px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3 id="Decode-image" style="position:relative;">Decode image<a href="#Decode-image" aria-label="Decode image permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 360px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/461730a45c5ed6b071479657c06e926b/f21e7/decode-image.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 186.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAlCAYAAABCr8kFAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE10lEQVRIx02WOS93URDGT+eL+BJKiYZERFQoxL7v+77v299OEKKgEFvQ2BKFgoYQFERF0PEJ5s1vksf7L27OPffMPPPMM3POueH19dWqqqpsdHTUmpubbXBw0DY2Nmxvb8/a29tteHjY6urq7ObmxiYnJy0/P99qamqsvr7eysvL3ZenuLjYioqKLDw/P1t1dbXFx8dbX1+fNTY2WmxsrGVnZ9vi4qLFxcW549XVlY2NjVlJSYmDErylpcUqKysdqKGhwSoqKiw8PT1ZYWGhT4g8Nzdn6enpVlpa6uBEx+ny8tIWFhbcGVtYMxKMd3yxDZ+fnzY1NWX7+/vW399vLy8v9vj4aNfX17azs+NS1NbW+vf5+XkbGRmxzs5OZ0RAxt7eXgdra2uz8PPzY+vr6zY9Pe0GOKDh2tqafX9/W1JSknV1ddnX15cDonFHR4eni0ToTPp8QzoHPD09dTBSz83NtczMTMvKyrLj42NPEX3REDlg19PTY0NDQ9bU1ORZAZiXl+eFCu/v784AfYgCw5iYGJudnXWw5ORkS0lJsY+PD1tdXfX0SA12gONDugD+FQXRU1NT3RjDSCTiQAAeHBy4Tre3t7a0tOQpkja6wow1fFpbW/1beHh48DTT0tK8l87OzmxmZsYSEhJseXnZEhMT3fj+/t5WVlbcCf0IDnh3d7dnSKWZh9/fX9va2nIdd3d37eTkxC4uLuzt7c0re3d358B0A4UiRcB4YAgg39CPedjc3HSg7e1tOzo6cmB2yfn5+d/88PDQW4hdg14wgg2gsCUDdKUXA/phgMAYoAlpEZE2YMQQJjjDAlsAqTaV5puqHjAGiEXERQtagYgY4KiqartRFEbYMrKOP0EDEx4cYQfYwMDAHyPtVwIxMicDdGMkKClr1wQcAcMQo+iUMKQvBQ4jggFCZhAhO/z0BHQif7HhI+kBAltOGGkHI2kHY74TfHx83Ef8AoZEoTCAyJjoGMGIdd4BUO8xh6UOB+2aQBXJHyOcAcYI4fmGEyAYSwpSln7MyYQ1xkBUpYcTDFkkkNoJxtFrsOcb65ChP3nQOxAF42hQjDAGACPORGnFu/oTdmontVYAYGJiwifSD3D1YXS/UXUVj5MFUGRixN5TBgS9EJaROYs462jHGRDY6mRhBAyWjMzJylPWkQ5bHe1iBjhnHU1NMGkuZgSUrl5lTXDmwqF6PACjDUcbt5zaBnaSAmD0LCsr+384yFnbh0VVlgMWFjow1CYwxV57W9vXDwdSgRkg3Lm86/rESYEAxFZ7mIBqaoqBjaesTa8UYUgkgDFgjTnpAaS7WMzIABttTd/LMOP4xwhjFnGUrqTOGiz4AVAP4gsoNtiz7oAA4AwjDHFQsQDLycnxKxYmYqzjjp8EHWkOiAHVQSvdC7CVTlQYBx0YAPEOKCOEIMPoKQPGhGg8pKRogKsgegeEUWeo/sIghq8fXwLl0Z8UhkignsMOsIKCAnfkXY/ay69RHNgJFEbpUGm1hy4r0lKx0FTXJ+wgoGIGHfuM2k7RzU4A7SAFgxFFAxxdBeinDXogPM3JVUD6+kMlVb3zqBjRzBUcHK8yThhxd3CawFY9pi0IE4FgK1as6deE7/6zBBCLOKML1UJT3R2882sn5jo/tbd1uGZkZDjDf9odJAy4oM8oAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="decode-image"
+        title="decode-image"
+        src="/static/461730a45c5ed6b071479657c06e926b/f21e7/decode-image.png"
+        srcset="/static/461730a45c5ed6b071479657c06e926b/070ae/decode-image.png 120w,
+/static/461730a45c5ed6b071479657c06e926b/8ff5a/decode-image.png 240w,
+/static/461730a45c5ed6b071479657c06e926b/f21e7/decode-image.png 360w"
+        sizes="(max-width: 360px) 100vw, 360px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3 id="주의할-점" style="position:relative;">주의할 점<a href="#%EC%A3%BC%EC%9D%98%ED%95%A0-%EC%A0%90" aria-label="주의할 점 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ul>
+<li>
+<p>QR Code 이미지의 한 픽셀, 한 픽셀을 잘라서 Base image에 넣는 작업을 거치기 때문에 QR Code의 해상도가 낮으면 결과물이 만족스럽지 않을 수 있음</p>
+<ul>
+<li>하지만, 개인정보가 포함된 qr을 넣으려면 서버 사이드에서 프론트 화면 렌더링 시, 이미지를 생성해야 하므로 깨질일은 거의 없을듯 하다~</li>
+</ul>
+</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 410px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/152df6a58db57cfb71e10da2ad7a6278/d68e4/decode-image2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 186.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAlCAYAAABCr8kFAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEwUlEQVRIx12WR0tsQRCF+98poii6UVwJjjmHMeec42BAzDkiRlRExIRhIy7EP1OPr+AMw1tcum931alzqqr73nB/f2/j4+O2urpqT09PtrGxYdfX17a2tma3t7f+PjExYfv7+zY0NGRlZWVWV1dnDQ0NVlpaajU1NVZeXu7rRUVFFm5ubuIOp6en1t/fb9/f37a7u2vDw8O2vb1tY2NjdnBwYIODg+5YWFhoTU1N1tbW5mAA8856+Pv7M1ju7e25M2yj0ahNT0870+fnZ/v6+rKXlxebmppyFoC2tLQ4GE9tba0/lZWVFj4/P+38/NyOj49tZmbGLi8v7ejoyNrb2+3u7s5WVlYcHCVzc3M2MDBgnZ2dLhu5jD09PQ5cX19v4erqyh4eHmxra8sBl5aW7OLiwhl3d3dbLBZzB8CXl5ett7fXOjo6rLGx0eeSzlpFRYWFs7Mze3t7c3kUYXFx0Zqbm+39/d02Nzc9DeRWxcMZhhQI2QBRoIKCApcdXl9fndnOzo5HxBCGVByw/Px8L87j46NXHhtAKR7AACIbO2R7DmFCHskVEqno7Oysra+v+0gH/Pz82MLCgoMRlALAEDWskT+KFZCKAfmhMIeHh15Rkg8bcksv/v7+2vz8vLORbArX1dXlD7lsbW21gDRYIJlcwgJgKk3uPj4+bHJy0qsMcyqLXKTCUKAw9BzCjFwh++TkxIGQyhxgRvaRTWNTXRUCICSrOJ5DupwXJPAQiQdHRpocJ5hIFna0lFiy39fX50FCcXFxPF/0GznCGAAlHEfeCQIAkhmxJQBpwBf7AANFwgAZSFNknqqqKq8q+7wzx48HVjCWoqCkIgdgGOGEEdHpABj/zwQwfPWOvUsmh0jGAVbKEUEA4ibCEAYalWvllsYHGEIBGTrw5JGR6DgCyB5OzJVTgjHCGGDAlOOgGwMgAbNB1XAEnHSoC1DAOz3HCJCCYh+QQTQAVF2dT51b2YgZ+wAywnpkZMQLCYZXWcYsqOKsEUDGBOK2Ya5TISIEVO4DtLkQ6C2cCAAQxkjHkMIRRHkkTdx9rAlQ5zswIQcwA1QtQiCdGo4U77BVbnXV4cccPwJ4UVRZXUOwgB0NDFAkEjEdUSVfrSPpgHmVlWQAkYEBc0aA9ZVTUJggUXNOETbs+30IC1iqPTDQcYMZzlQ8kTkSdVnAjD6UOr8cmLDBHGmAC1g9B3vZVVdX+z525J+8EhTbAE2SzqYqCgsMEpnprBIUcJ0aRj5Q+BAoEImHD7iksiFAAiCdgKyXlJTEC8Go3DF3yeoxWOqC0HeDh4Lk5eW5E8F0SSCPOa2UeMUFHIisK4wHtmwSVXJ0N6owBCMwviqsA4LMBiOU9eOjPwLWYASQ2koBqLTSAAajX18YKm8w0o2s20SFAZh86geJdYhAQr94Dohsqkf+AGGNZscYIxWCfdb4SyBFBIOMfuX8pFAItczo6Gj8r4rorCX+WGLHPPHkKKcE8suByLDjGNGgOCJfn1IC6EwnslQRZMu6/33hxC3Dd4G7DmCOFobIZhQ7fWJ16epG4ujpdIXc3FxLS0uzrKwsy87OtoyMDEtNTbXMzEx/T0pKspSUFF9jLycnx/Bhnp6e7nb4Jicnu90/MG00Tflx88IAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="decode-image2"
+        title="decode-image2"
+        src="/static/152df6a58db57cfb71e10da2ad7a6278/d68e4/decode-image2.png"
+        srcset="/static/152df6a58db57cfb71e10da2ad7a6278/070ae/decode-image2.png 120w,
+/static/152df6a58db57cfb71e10da2ad7a6278/8ff5a/decode-image2.png 240w,
+/static/152df6a58db57cfb71e10da2ad7a6278/d68e4/decode-image2.png 410w"
+        sizes="(max-width: 410px) 100vw, 410px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>
+<p>R 값을 1 낮추는 방식으로 진행했는데, 케이스에 따라 G, B 값을 변경시키거나, 1이 아닌 더 큰 값으로 변경시킬 수 있을 것 같음. 하지만 갭이 커질수록 열화현상이 발생할 수 있으니 주의해야 한다.</p>
+<ul>
+<li>아래 <code class="language-text">R -5 ~ R -20 이미지 참고</code></li>
+<li>왼쪽 위 상단 부분의 색상 변화가 갈수록 눈에 띄게 커짐</li>
+</ul>
+</li>
+</ul>
+<h3 id="R--5" style="position:relative;">R -5<a href="#R--5" aria-label="R  5 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 360px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a6c6f50a7a592ba4cef2487b2eda8e83/f21e7/R-5.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 186.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,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'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="R-5"
+        title="R-5"
+        src="/static/a6c6f50a7a592ba4cef2487b2eda8e83/f21e7/R-5.png"
+        srcset="/static/a6c6f50a7a592ba4cef2487b2eda8e83/070ae/R-5.png 120w,
+/static/a6c6f50a7a592ba4cef2487b2eda8e83/8ff5a/R-5.png 240w,
+/static/a6c6f50a7a592ba4cef2487b2eda8e83/f21e7/R-5.png 360w"
+        sizes="(max-width: 360px) 100vw, 360px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3 id="R--10" style="position:relative;">R -10<a href="#R--10" aria-label="R  10 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 360px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b9b0e83500adc2380405968fd5df5a52/f21e7/R-10.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 186.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,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'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="R-10"
+        title="R-10"
+        src="/static/b9b0e83500adc2380405968fd5df5a52/f21e7/R-10.png"
+        srcset="/static/b9b0e83500adc2380405968fd5df5a52/070ae/R-10.png 120w,
+/static/b9b0e83500adc2380405968fd5df5a52/8ff5a/R-10.png 240w,
+/static/b9b0e83500adc2380405968fd5df5a52/f21e7/R-10.png 360w"
+        sizes="(max-width: 360px) 100vw, 360px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3 id="R--15" style="position:relative;">R -15<a href="#R--15" aria-label="R  15 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 360px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/74c90ab4909348013c6f7c2f5453a441/f21e7/R-15.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 186.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,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'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="R-15"
+        title="R-15"
+        src="/static/74c90ab4909348013c6f7c2f5453a441/f21e7/R-15.png"
+        srcset="/static/74c90ab4909348013c6f7c2f5453a441/070ae/R-15.png 120w,
+/static/74c90ab4909348013c6f7c2f5453a441/8ff5a/R-15.png 240w,
+/static/74c90ab4909348013c6f7c2f5453a441/f21e7/R-15.png 360w"
+        sizes="(max-width: 360px) 100vw, 360px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3 id="R--20" style="position:relative;">R -20<a href="#R--20" aria-label="R  20 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 360px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5a189cad17558d23b72bd10da6ce41d9/f21e7/R-20.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 186.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,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'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="R-20"
+        title="R-20"
+        src="/static/5a189cad17558d23b72bd10da6ce41d9/f21e7/R-20.png"
+        srcset="/static/5a189cad17558d23b72bd10da6ce41d9/070ae/R-20.png 120w,
+/static/5a189cad17558d23b72bd10da6ce41d9/8ff5a/R-20.png 240w,
+/static/5a189cad17558d23b72bd10da6ce41d9/f21e7/R-20.png 360w"
+        sizes="(max-width: 360px) 100vw, 360px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h1 id="실제-서비스의-적용" style="position:relative;">실제 서비스의 적용<a href="#%EC%8B%A4%EC%A0%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%9D%98-%EC%A0%81%EC%9A%A9" aria-label="실제 서비스의 적용 permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ul>
+<li>당연히 모든 QR Code를 숨긴 이미지가 동일하게 숨긴다면 개발을 할 줄 아는 사람이 decode 코드를 짤 수 있음!</li>
+<li>
+<p>QR Code를 조작하는 방식으로 진행</p>
+<ul>
+<li>
+<p>QR Code 픽셀별로 R, G, B의 컬러값을 다르게 바꾼다던지</p>
+<ul>
+<li>홀수 픽셀은 G 값 변경, 짝수 픽셀은 R값 변경 등등…</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>해독하는 decode 코드는 우리만 아는 방식으로, 우리만 알아볼 수 있게 해두면 됨</li>
+<li>예를 들어 QR Code를 y축 기준 2배 늘리면 어떻게 될까?</li>
+</ul>
+<h3 id="QR-Code를-Y축-2배-늘린-Encode-image" style="position:relative;">QR Code를 Y축 2배 늘린 Encode image<a href="#QR-Code%EB%A5%BC-Y%EC%B6%95-2%EB%B0%B0-%EB%8A%98%EB%A6%B0-Encode-image" aria-label="QR Code를 Y축 2배 늘린 Encode image permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 360px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/10c80a17910c0997a03954ee9f807784/f21e7/Y2-encode-image.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 186.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,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'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Y2-encode-image"
+        title="Y2-encode-image"
+        src="/static/10c80a17910c0997a03954ee9f807784/f21e7/Y2-encode-image.png"
+        srcset="/static/10c80a17910c0997a03954ee9f807784/070ae/Y2-encode-image.png 120w,
+/static/10c80a17910c0997a03954ee9f807784/8ff5a/Y2-encode-image.png 240w,
+/static/10c80a17910c0997a03954ee9f807784/f21e7/Y2-encode-image.png 360w"
+        sizes="(max-width: 360px) 100vw, 360px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3 id="QR-Code를-Y축-2배-늘린-Decode-image" style="position:relative;">QR Code를 Y축 2배 늘린 Decode image<a href="#QR-Code%EB%A5%BC-Y%EC%B6%95-2%EB%B0%B0-%EB%8A%98%EB%A6%B0-Decode-image" aria-label="QR Code를 Y축 2배 늘린 Decode image permalink" class="autolink-headers-- after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 360px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/32de089fa918fa1847465b15dc3bcac2/f21e7/Y2-decode-image.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 186.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAlCAYAAABCr8kFAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE+klEQVRIx03WSU8QQRAF4PlTHuUgHLxoPBlQokZw31BBXHDBfTcquICAAm64ASEuHNQAIV78TWW+Sspw6PT0dPWrV/Wqeqb5/v17fPr0KV6+fBnT09Px7du3WFxcjIWFhfj8+XN8/PgxPnz4ED9+/Ihz587FgQMH4vjx49HX1xdHjhyJnp6eHN7v378/GmBbt26Nbdu2RVdXV9y4cSPevXsXDx48iO7u7nzf0dERT58+jfPnz8fRo0fz/ZkzZ+Ls2bNx7NixBDp16lTuNSMjI3H58uVkceXKlTTeuXNn3L17N27evBnj4+Pp5MWLF3Hr1q04dOhQHuzt7c0ZS88nTpxIps3bt28zhNbW1vQqlE2bNiXbq1evRktLSzp58+ZNAt67dy8uXryYjPr7+3NGBNjAwEA0wuOhra0tNx8/fhzbt2/PnFy7di3Wr1+fYU1NTSUYUKELl0PPiFy4cCGJNa9fv87wJicn4+HDh/kMEEMhP3nyJN8T7fr165mewcHB3Dt9+nQ6BSgK0TVy1N7enrmROwdQZ9zZ2Rl79+5N0QA+e/YsWVHbLHTMhAswRfn161cm3nDo69evMTs7myXz/PnzBHn16lWW0e3bt+PSpUsp0smTJ5OZNJUT7xp1JhTlI1dzc3MJOjo6GmNjY2koBe/fv88cAgBECPkTPid0sG7m5+fz8KNHj2JoaOi/oVwSbMuWLRna0tJS1iYANgZga2HLn3Xz5cuXBDt8+HDmS+4IYegOatrHHENRYMQpUPuikHe1mHWIGdVs7t69O8NS/YreTBSFLYf2MAZIQAQwK9UbfQv0zp07Cchwx44dcfDgwQxF8W7cuDFEQgzrck5dM3ZVThkyr+h6ie26detSKAYY6mX5FBoW1OTMbO19dU2GTCFlY2akLoeHh2Pfvn05ACsluSsxEMDMGniNRu1Vb1J2165dWf2aXithZk8nARSiSDj37Gz1t3pseLa5YcOGnNUlVV0QGOhhbCYmJjLP2AEE4H1dDtU12cu1yYPy0LtaSemow5mZmXARU1m+gFb+iCgiGOZGN0AGXAnGoEph8+bNqbp9jrAGIhopIIYbyOAwW8/N4mKwqTSIAMAn4efPn3mVaU0dxUl9AgCLinOOMoe/f/+Ov3//5vjz509Yr66uxsrKSq6Xl5dzaL06LAo3C1DlZQaYIUu2sHUCJQ23jHcuW+VDRfWpl4EWG2BYmq2loCnqcsIzcTxTT+nIq1LS61KhVMzFjD1BOEmVq9HlRRjUM+SzbmKXhkN1EXBSwM5x9v9ycBibah+bDmOp7bCwv7ZMVEGVT/Vy3fKN60hoQFwIngFrfIfKEUC21cOVFkVNDDYZsg2GdRNjyBNgBvashQeovsXFTARsqtgbOcBMrTFibNNBLK2Fbg8LH7MS0lmgbNjbT0AADmPE0IFSDphL162DSTFmJyrdw1kJmTmkjlzVdwHbytOePXvygOe1bQfUjBAy5gwZmAVvhpDWlk0JUs9AzPX3UH9hiDnb1GUJ1Kg/KYZSUDXHDpiadNBzjSqv/Iw6oHgJU+FQusqDYYVVYslpfT6xq67Kz6iX9bNT7bS22DlgXDnlDCOiAZfXAszbRj4kXnG6moRvABZqPRslxlrm5RxOquwQI98TFyS2VWPVgtXjQNgWq/qoFUb+LAGqj7e8UEtO67+l/miLudTcv3//f2/X5erXGcN/4PInbF+e72IAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Y2-decode-image"
+        title="Y2-decode-image"
+        src="/static/32de089fa918fa1847465b15dc3bcac2/f21e7/Y2-decode-image.png"
+        srcset="/static/32de089fa918fa1847465b15dc3bcac2/070ae/Y2-decode-image.png 120w,
+/static/32de089fa918fa1847465b15dc3bcac2/8ff5a/Y2-decode-image.png 240w,
+/static/32de089fa918fa1847465b15dc3bcac2/f21e7/Y2-decode-image.png 360w"
+        sizes="(max-width: 360px) 100vw, 360px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>이렇듯, QR Code의 픽셀들을 decode 했을 때 우리만 알아볼 수 있도록 난독화를 해줘야 함. 위의 이미지는 예시지만 쉽게 알아볼 수 있으면 안됨</p></section><hr style="margin-bottom:1.625rem"/><footer style="color:#898989"><p scale="[object Object]" class="PostTags__StyledPTags-sc-1ielp4x-0 kRNYYT">#javascript <!-- -->#basic <!-- -->#hoisting </p></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"></ul></nav></main><footer style="text-align:center"><span style="display:inline-block;width:2.275rem;vertical-align:top;margin:0 10px"><a href="https://github.com/jicjjang" target="_blank"><img src="/static/b33838e421fcf2eaeb2da472c1e32060/github.png" style="display:block;width:100%"/></a></span><span style="display:inline-block;width:2.275rem;vertical-align:top;margin:0 10px"><a href="https://www.linkedin.com/in/jicjjang" target="_blank"><img src="/static/3e51027afe6b45fb6d7b38b1e194dcbb/linkedin.png" style="display:block;width:100%"/></a></span><span style="display:inline-block;width:2.275rem;vertical-align:top;margin:0 10px"><a href="https://www.instagram.com/jicjjang" target="_blank"><img src="/static/64b2774f0c50daac23fd881877dae854/instagram.png" style="display:block;width:100%"/></a></span><span style="display:inline-block;width:2.275rem;vertical-align:top;margin:0 10px"><a href="mailto:jicjjang12@gmail.com" target="_blank"><img src="/static/ababfdf6167a3ee6c8f91dd6d29c765d/mail.png" style="display:block;width:100%"/></a></span></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-59806888-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/hide-qr-code";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-77c8fcefe79961b4834e.js"],"app":["/app-546e1f3dac184980066b.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-9023e69c8b9c141f86eb.js"],"component---src-pages-archive-tsx":["/component---src-pages-archive-tsx-ba6595d573a79b6a7435.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-0d707984196c022fbb95.js"],"component---src-pages-presentation-1-tsx":["/component---src-pages-presentation-1-tsx-d7d3381e6cc5e66102e1.js"],"component---src-pages-presentation-2-tsx":["/component---src-pages-presentation-2-tsx-6631b7f7b0abaab3bec7.js"],"component---src-pages-presentation-3-tsx":["/component---src-pages-presentation-3-tsx-7401971b6907d4d1e893.js"],"component---src-pages-presentation-4-tsx":["/component---src-pages-presentation-4-tsx-f21f2e1cabb85ae33d8d.js"],"component---src-pages-presentation-5-tsx":["/component---src-pages-presentation-5-tsx-aefebc70c329bb020718.js"],"component---src-pages-presentation-6-tsx":["/component---src-pages-presentation-6-tsx-7c0456a8cf79732c517c.js"],"component---src-pages-presentation-7-tsx":["/component---src-pages-presentation-7-tsx-98a6233bd3b693d8c606.js"],"component---src-pages-presentation-8-tsx":["/component---src-pages-presentation-8-tsx-c6732a60ad07f7dc496f.js"],"component---src-pages-presentation-9-tsx":["/component---src-pages-presentation-9-tsx-13a4713bccc904511ac4.js"],"component---src-pages-presentation-index-tsx":["/component---src-pages-presentation-index-tsx-c82cefae43f93c2c44e7.js"],"component---src-pages-resume-tsx":["/component---src-pages-resume-tsx-212d2acbe8213359bfb9.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-98fb5b1bc6b857075e3e.js"]};/*]]>*/</script><script src="/polyfill-77c8fcefe79961b4834e.js" nomodule=""></script><script src="/component---src-templates-post-template-tsx-98fb5b1bc6b857075e3e.js" async=""></script><script src="/96d63672732fbc000942c853d1f1d8bc5d3b9750-d9b07ebd0aed616bc44b.js" async=""></script><script src="/f6b66f032c82d0fe30c6a2c7af7bedaaf1113f84-7dd933e8bd2a66a9062b.js" async=""></script><script src="/app-546e1f3dac184980066b.js" async=""></script><script src="/framework-2d6b7d2e2be378715b78.js" async=""></script><script src="/styles-77e32ee8d6888701d03f.js" async=""></script><script src="/webpack-runtime-7063b288c2020be4fd72.js" async=""></script></body></html>
